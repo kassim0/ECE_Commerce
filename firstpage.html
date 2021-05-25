@@ -9,16 +9,29 @@
 	 href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> 
+	<script type="text/javascript">
+ 			$(document).ready(function(){
+ 			$('.header').height($(window).height());
+ 			});
+ 			
+	</script> 
+	
 </head>
+
 <body>
+	
 	<nav class="navbar navbar-expand-md">
-		 <a class="navbar-brand" href="Ecestore.png">Logo</a>
+		 <a class="navbar-brand" href="Ecestore.png">
+		 	<div class="b-logo swift_left">
+                        <img src="Ecestore.png" alt="ECE MarketPlace" class="img-fluid" width="50" height="15">
+            </div>
+		 </a>
 		 <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
 		 	<span class="navbar-toggler-icon"></span>
 		 </button>
 		 <div class="collapse navbar-collapse" id="main-navigation">
 			 <ul class="navbar-nav">
-				 <li class="nav-item"><a class="nav-link" href="Accueil.html">Accueil</a></li>
+				 <li class="nav-item"><a class="nav-link" href="Acceuil.html">Accueil</a></li>
 				 <li class="ToutParcourir.html"><a class="nav-link" href="#">Tout Parcourir</a></li>
 				 <li class="nav-item"><a class="nav-link" href="Notifications.html">Notifications</a></li>
 				 <li class="nav-item"><a class="nav-link" href="Panier.html">Panier</a></li>
@@ -26,6 +39,31 @@
 			 </ul>
 		 </div>
  	</nav>
+ 	<header class="page-header header container-fluid">
+		<div class="overlay"> </div>
+		<div class="description">
+ 			<h1>Bienvenue sur ECEMarketPlace</h1>
+ 			<p>
+				Le site pour tous vos achats en ligne!
+			</p> 
+		</div>
+	</header>
 
+	<footer class="page-footer">
+		 <div class="container">
+			 <div class="row">
+				 <div class="text-center">
+					 <h6 class="text-uppercase font-weight-bold ">Contact</h6>
+					<p>
+					 adresse<br>
+					 <a href="mailto:ece.marketplace@gmail.com">ece.marketplace@gmail.com</a> <br>
+				 	Numero <br>
+				 	</p>
+				 </div>
+				</div>
+			 <div class="footer-copyright text-center">Copyright &copy; 2021 ECE MarketPlace
+			 
+		</div>
+	</footer>
 </body>
 </html>
