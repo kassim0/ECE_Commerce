@@ -5,7 +5,7 @@ body {
 }
 /*--- navigation bar ---*/
 .navbar {
- background:#00BDAA;
+ background:#1C1C1C;
 }
 .nav-link, .navbar-brand {
  color: #F5F6CE;
@@ -44,6 +44,12 @@ body {
  transform: translate(-50%, -55%);
  text-align: center;
 }
+
+.description img{
+	margin-left: 200px;
+	margin-bottom: -58px;
+}
+
 .description h1 {
  color: #F5F6CE;
 }
