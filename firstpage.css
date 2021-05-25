@@ -5,7 +5,7 @@ body {
 }
 /*--- navigation bar ---*/
 .navbar {
- background:#1C1C1C;
+ background:#048B9A;
 }
 .nav-link, .navbar-brand {
  color: #F5F6CE;
@@ -62,6 +62,7 @@ body {
  background-color: #1C1C1C;
  color: #F5F6CE;
  padding: 60px 0 30px;
+ text-align: center;
 }
 .footer-copyright {
  color: #666;
