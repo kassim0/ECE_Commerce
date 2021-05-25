@@ -38,23 +38,23 @@ body {
 }
 
  .description {
- left: 0;
- padding: 0 15px;
+ left: 50%;
  position: absolute;
- top: 10%;
- transform: none;
+ top: 45%;
+ transform: translate(-50%, -55%);
  text-align: center;
- }
+}
+.description h1 {
+ color: #F5F6CE;
+}
+.description p {
+ color: #F5F6CE;
+ font-size: 1.3rem;
+ line-height: 1.5;
+}
+
  
- .description h1 {
- font-size: 2em;
- }
- 
- .description p {
- font-size: 1.2rem;
- }
- 
- .features {
+.features {
  margin: 0;
  }
 
