@@ -1,36 +1,41 @@
-h1 {
- text-align: center;
- color: white;
- background-color: #666699;
- font-size: 30px;
- border-radius: 10px;
+body {
+ padding: 0px;
+ margin: 0px;
+ background: #D8D8D8;
+ height: 100vh;
 }
-#carrousel {
- position: relative;
- height: 200px;
- width: 700px;
- margin: auto;
- float: left;
+/*--- navigation bar ---*/
+.navbar {
+ background:#1C1C1C;
 }
-#carrousel ul li {
- position: absolute;
- top: 0;
- left: 0;
- list-style: none;
+.nav-link, .navbar-brand {
+ color: #FFFFFF;
+ cursor: pointer;
 }
-.next {
- position: relative;
- top: 500px; 
- left: 300px;
- background-color: #add080;
- font-size: 20px;
- border-radius: 6px;
+.nav-link {
+ margin-right: 1em !important;
 }
-.prev {
- position: relative;
- top: 500px;
- left: 420px;
- background-color: #add080;
- font-size: 20px;
- border-radius: 6px;
+.nav-link:hover {
+ color: #000;
 }
+.navbar-collapse {
+ justify-content: flex-end;
+}
+
+
+#carouselArticle{
+	width: 100%;
+	margin: auto;
+}
+
+.carousel-item {
+	width: 100%;
+	height: 500px;
+    margin-bottom: 40px;
+}
+
+.carousel-item img{
+    margin: auto;
+    float: center;
+}
+
