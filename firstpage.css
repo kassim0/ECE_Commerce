@@ -22,7 +22,8 @@ body {
 }
 
 .header {
- background: url('shop.jpg');
+ background-image: linear-gradient(#33FFFF, #3355FF);
+/* background: url('shop.jpg');*/
  background-size: cover;
  background-position: center;
  position: relative;
@@ -43,6 +44,22 @@ body {
  top: 45%;
  transform: translate(-50%, -55%);
  text-align: center;
+ animation: titre ease 2s;
+}
+
+.description h1 img p{
+    
+}
+
+@keyframes titre{
+0%{
+    opacity: 0;
+    transform: translate(-50%,-350px);
+}
+100%{
+    opacity: 1;
+    transform: translateY(50%,0px);
+}
 }
 
 .description img{
