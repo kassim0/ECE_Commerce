@@ -272,7 +272,7 @@ echo "Database not found";
 
 if (isset($_POST["materiels"])) {
 if ($db_found) {
-$sql = "SELECT * FROM articles WHERE articles.categorie = 'materielscholaire'";
+$sql = "SELECT * FROM articles WHERE articles.categorie = 'materielscolaire'";
 
 $result = mysqli_query($db_handle, $sql);
 
