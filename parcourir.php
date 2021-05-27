@@ -33,7 +33,7 @@
 		 </div>
  	</nav>
 
- 		  <h2>Articles</h2>
+ 		  <h2 id="t">Tous les articles</h2>
 			<div id="myBtnContainer">
 			 
 			  <form action="parcourir.php" method="post">
@@ -41,6 +41,9 @@
 			  	 <button class="btn" name="meilleur"> Meilleur Offre</button>
 				 <button class="btn" onclick="filterSelection('transaction')"> Transaction client-vendeur</button>
 			 	 <button class="btn" onclick="filterSelection('achat')"> Achat immédiat</button>
+			 	 <button class="btn" onclick="filterSelection('meubles')"> Meubles et objets d'art</button>
+			 	  <button class="btn" onclick="filterSelection('accessoire')"> Accessoire VIP</button>
+			 	  <button class="btn" onclick="filterSelection('materiels')"> Matériels scolaires</button>
 				
 			</form>
 			 
@@ -49,8 +52,8 @@
 			
 <!---------------PHP--------------------------------->
 
-<div class="row">
-	<div class="content">
+
+	
 <?php
 
 $database = "eceshop";
@@ -67,16 +70,235 @@ $result = mysqli_query($db_handle, $sql);
 if (mysqli_num_rows($result) == 0) {
 } else {
 
-while ($data = mysqli_fetch_assoc($result)) {
+echo '<div class="container">';
+echo '<div class="row">';
 
-echo '<img src = "data:image/jpd;base64,' . base64_encode($data['image']) . '" width = "300px" height = "300px"/>';
-echo '<br>';
-echo $data['nom'];
-echo '<br>';
-echo $data['prix']." €";
-echo '<br>';
-echo $data['description'];
+while ($data = mysqli_fetch_assoc($result)) {
+ 
+echo	'<div class="col-lg-4">';	
+echo		'<div class="content">';
+echo		 '<img src = "data:image/jpd;base64,' . base64_encode($data['image']) . '" width = "75%"/>';
+
+echo		 '<h5>'.$data['nom'].'</h5>';
+echo		$data['prix'].'€';
+		
+echo		'</div>';
+echo	'</div>';
+
+
 }
+echo 	'</div>';
+echo'</div>';
+}
+} else {
+echo "Database not found";
+}
+}
+
+if (isset($_POST["meilleur"])) {
+if ($db_found) {
+$sql = "SELECT * FROM articles WHERE articles.modedachat = 'enchere'";
+
+$result = mysqli_query($db_handle, $sql);
+
+
+if (mysqli_num_rows($result) == 0) {
+} else {
+
+echo '<div class="container">';
+echo '<div class="row">';
+
+while ($data = mysqli_fetch_assoc($result)) {
+ 
+echo	'<div class="col-lg-4">';	
+echo		'<div class="content">';
+echo		 '<img src = "data:image/jpd;base64,' . base64_encode($data['image']) . '" width = "75%"/>';
+
+echo		 '<h5>'.$data['nom'].'</h5>';
+echo		$data['prix'].'€';
+		
+echo		'</div>';
+echo	'</div>';
+
+
+}
+echo 	'</div>';
+echo'</div>';
+}
+} else {
+echo "Database not found";
+}
+}
+
+if (isset($_POST["transaction"])) {
+if ($db_found) {
+$sql = "SELECT * FROM articles WHERE articles.modedachat = 'negociation'";
+
+$result = mysqli_query($db_handle, $sql);
+
+
+if (mysqli_num_rows($result) == 0) {
+} else {
+
+echo '<div class="container">';
+echo '<div class="row">';
+
+while ($data = mysqli_fetch_assoc($result)) {
+ 
+echo	'<div class="col-lg-4">';	
+echo		'<div class="content">';
+echo		 '<img src = "data:image/jpd;base64,' . base64_encode($data['image']) . '" width = "75%"/>';
+
+echo		 '<h5>'.$data['nom'].'</h5>';
+echo		$data['prix'].'€';
+		
+echo		'</div>';
+echo	'</div>';
+
+
+}
+echo 	'</div>';
+echo'</div>';
+}
+} else {
+echo "Database not found";
+}
+}
+
+if (isset($_POST["achat"])) {
+if ($db_found) {
+$sql = "SELECT * FROM articles WHERE articles.modedachat = 'achat'";
+
+$result = mysqli_query($db_handle, $sql);
+
+
+if (mysqli_num_rows($result) == 0) {
+} else {
+
+echo '<div class="container">';
+echo '<div class="row">';
+
+while ($data = mysqli_fetch_assoc($result)) {
+ 
+echo	'<div class="col-lg-4">';	
+echo		'<div class="content">';
+echo		 '<img src = "data:image/jpd;base64,' . base64_encode($data['image']) . '" width = "75%"/>';
+
+echo		 '<h5>'.$data['nom'].'</h5>';
+echo		$data['prix'].'€';
+		
+echo		'</div>';
+echo	'</div>';
+
+
+}
+echo 	'</div>';
+echo'</div>';
+}
+} else {
+echo "Database not found";
+}
+}
+
+if (isset($_POST["meubles"])) {
+if ($db_found) {
+$sql = "SELECT * FROM articles WHERE articles.categorie = 'meuble'";
+
+$result = mysqli_query($db_handle, $sql);
+
+
+if (mysqli_num_rows($result) == 0) {
+} else {
+
+echo '<div class="container">';
+echo '<div class="row">';
+
+while ($data = mysqli_fetch_assoc($result)) {
+ 
+echo	'<div class="col-lg-4">';	
+echo		'<div class="content">';
+echo		 '<img src = "data:image/jpd;base64,' . base64_encode($data['image']) . '" width = "75%"/>';
+
+echo		 '<h5>'.$data['nom'].'</h5>';
+echo		$data['prix'].'€';
+		
+echo		'</div>';
+echo	'</div>';
+
+
+}
+echo 	'</div>';
+echo'</div>';
+}
+} else {
+echo "Database not found";
+}
+}
+
+if (isset($_POST["accessoire"])) {
+if ($db_found) {
+$sql = "SELECT * FROM articles WHERE articles.categorie = 'accessoire'";
+
+$result = mysqli_query($db_handle, $sql);
+
+
+if (mysqli_num_rows($result) == 0) {
+} else {
+
+echo '<div class="container">';
+echo '<div class="row">';
+
+while ($data = mysqli_fetch_assoc($result)) {
+ 
+echo	'<div class="col-lg-4">';	
+echo		'<div class="content">';
+echo		 '<img src = "data:image/jpd;base64,' . base64_encode($data['image']) . '" width = "75%"/>';
+
+echo		 '<h5>'.$data['nom'].'</h5>';
+echo		$data['prix'].'€';
+		
+echo		'</div>';
+echo	'</div>';
+
+
+}
+echo 	'</div>';
+echo'</div>';
+}
+} else {
+echo "Database not found";
+}
+}
+
+if (isset($_POST["materiels"])) {
+if ($db_found) {
+$sql = "SELECT * FROM articles WHERE articles.categorie = 'materiels'";
+
+$result = mysqli_query($db_handle, $sql);
+
+
+if (mysqli_num_rows($result) == 0) {
+} else {
+
+echo '<div class="container">';
+echo '<div class="row">';
+
+while ($data = mysqli_fetch_assoc($result)) {
+ 
+echo	'<div class="col-lg-4">';	
+echo		'<div class="content">';
+echo		 '<img src = "data:image/jpd;base64,' . base64_encode($data['image']) . '" width = "75%"/>';
+
+echo		 '<h5>'.$data['nom'].'</h5>';
+echo		$data['prix'].'€';
+		
+echo		'</div>';
+echo	'</div>';
+
+
+}
+echo 	'</div>';
+echo'</div>';
 }
 } else {
 echo "Database not found";
@@ -85,16 +307,9 @@ echo "Database not found";
 
 mysqli_close($db_handle);
 ?>
-</div>
-</div>
 
 
 
-
-
-
-
-<!----RRR-----
  	<footer class="page-footer">
 		 <div class="container">
 			 <div class="row">
@@ -106,8 +321,8 @@ mysqli_close($db_handle);
 			 
 		</div>
 	</footer>
-	<script src="parcourir.js"></script>
------>
+	
 
+<script src="parcourir.js"></script>
 </body>
 </html>
