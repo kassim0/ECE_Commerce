@@ -167,7 +167,7 @@ echo "Database not found";
 
 if (isset($_POST["achat"])) {
 if ($db_found) {
-$sql = "SELECT * FROM articles WHERE articles.modedachat = 'achat'";
+$sql = "SELECT * FROM articles WHERE articles.modedachat = 'payementimmediat'";
 
 $result = mysqli_query($db_handle, $sql);
 
@@ -237,7 +237,7 @@ echo "Database not found";
 
 if (isset($_POST["accessoire"])) {
 if ($db_found) {
-$sql = "SELECT * FROM articles WHERE articles.categorie = 'accessoire'";
+$sql = "SELECT * FROM articles WHERE articles.categorie = 'accessoireVIP'";
 
 $result = mysqli_query($db_handle, $sql);
 
@@ -272,7 +272,7 @@ echo "Database not found";
 
 if (isset($_POST["materiels"])) {
 if ($db_found) {
-$sql = "SELECT * FROM articles WHERE articles.categorie = 'materiels'";
+$sql = "SELECT * FROM articles WHERE articles.categorie = 'materielscholaire'";
 
 $result = mysqli_query($db_handle, $sql);
 
