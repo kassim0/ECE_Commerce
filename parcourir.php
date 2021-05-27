@@ -39,11 +39,11 @@
 			  <form action="parcourir.php" method="post">
 			  	 <button class="btn active" name="toutVoir" >Tout voir</button>
 			  	 <button class="btn" name="meilleur"> Meilleur Offre</button>
-				 <button class="btn" onclick="filterSelection('transaction')"> Transaction client-vendeur</button>
-			 	 <button class="btn" onclick="filterSelection('achat')"> Achat immédiat</button>
-			 	 <button class="btn" onclick="filterSelection('meubles')"> Meubles et objets d'art</button>
-			 	  <button class="btn" onclick="filterSelection('accessoire')"> Accessoire VIP</button>
-			 	  <button class="btn" onclick="filterSelection('materiels')"> Matériels scolaires</button>
+				 <button class="btn" name="transaction"> Transaction client-vendeur</button>
+			 	 <button class="btn" name="achat"> Achat immédiat</button>
+			 	 <button class="btn" name="meubles"> Meubles et objets d'art</button>
+			 	  <button class="btn" name="accessoire"> Accessoire VIP</button>
+			 	  <button class="btn" name="materiels"> Matériels scolaires</button>
 				
 			</form>
 			 
