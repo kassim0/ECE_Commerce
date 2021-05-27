@@ -81,6 +81,8 @@ echo		 '<img src = "data:image/jpd;base64,' . base64_encode($data['image']) . '"
 
 echo		 '<h5>'.$data['nom'].'</h5>';
 echo		$data['prix'].'€';
+echo 		'<button type="submit" name="add" class="btn btn-danger my-3">Ajouter au panier <i class="fas fa-shopping-cart"></i></button>';
+echo         "<input type='hidden' name='product_id' >";
 		
 echo		'</div>';
 echo	'</div>';
@@ -116,6 +118,8 @@ echo		 '<img src = "data:image/jpd;base64,' . base64_encode($data['image']) . '"
 
 echo		 '<h5>'.$data['nom'].'</h5>';
 echo		$data['prix'].'€';
+echo 		'<button type="submit" name="add" class="btn btn-danger my-3">Ajouter au panier <i class="fas fa-shopping-cart"></i></button>';
+echo         "<input type='hidden' name='product_id' >";
 		
 echo		'</div>';
 echo	'</div>';
@@ -151,6 +155,8 @@ echo		 '<img src = "data:image/jpd;base64,' . base64_encode($data['image']) . '"
 
 echo		 '<h5>'.$data['nom'].'</h5>';
 echo		$data['prix'].'€';
+echo 		'<button type="submit" name="add" class="btn btn-danger my-3">Ajouter au panier <i class="fas fa-shopping-cart"></i></button>';
+echo         "<input type='hidden' name='product_id' >";
 		
 echo		'</div>';
 echo	'</div>';
@@ -186,6 +192,8 @@ echo		 '<img src = "data:image/jpd;base64,' . base64_encode($data['image']) . '"
 
 echo		 '<h5>'.$data['nom'].'</h5>';
 echo		$data['prix'].'€';
+echo 		'<button type="submit" name="add" class="btn btn-danger my-3">Ajouter au panier <i class="fas fa-shopping-cart"></i></button>';
+echo         "<input type='hidden' name='product_id' >";
 		
 echo		'</div>';
 echo	'</div>';
@@ -221,6 +229,8 @@ echo		 '<img src = "data:image/jpd;base64,' . base64_encode($data['image']) . '"
 
 echo		 '<h5>'.$data['nom'].'</h5>';
 echo		$data['prix'].'€';
+echo 		'<button type="submit" name="add" class="btn btn-danger my-3">Ajouter au panier <i class="fas fa-shopping-cart"></i></button>';
+echo         "<input type='hidden' name='product_id' >";
 		
 echo		'</div>';
 echo	'</div>';
@@ -256,6 +266,8 @@ echo		 '<img src = "data:image/jpd;base64,' . base64_encode($data['image']) . '"
 
 echo		 '<h5>'.$data['nom'].'</h5>';
 echo		$data['prix'].'€';
+echo 		'<button type="submit" name="add" class="btn btn-danger my-3">Ajouter au panier <i class="fas fa-shopping-cart"></i></button>';
+echo         "<input type='hidden' name='product_id' >";
 		
 echo		'</div>';
 echo	'</div>';
@@ -291,6 +303,8 @@ echo		 '<img src = "data:image/jpd;base64,' . base64_encode($data['image']) . '"
 
 echo		 '<h5>'.$data['nom'].'</h5>';
 echo		$data['prix'].'€';
+echo 		'<button type="submit" name="add" class="btn btn-danger my-3">Ajouter au panier <i class="fas fa-shopping-cart"></i></button>';
+echo         "<input type='hidden' name='product_id' >";
 		
 echo		'</div>';
 echo	'</div>';
