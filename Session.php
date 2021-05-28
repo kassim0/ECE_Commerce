@@ -99,7 +99,7 @@ $database="eceshop";
 		}
 		else{
 			echo "connexion réussie<br>";
-			 echo "Cliquez "."<a href='compte1.php'>"."ici"."</a>"." pour accéder à votre compte";
+			 echo "Cliquez "."<a href='votrecompte.php'>"."ici"."</a>"." pour accéder à votre compte";
 	}
 
 
@@ -107,7 +107,7 @@ $database="eceshop";
 
 
 
-		$_SESSION['email']=$email;
+	$_SESSION['email']=$email;
     $_SESSION['mdp']=$mdp;
     if($db_found){
     	if($email!='' || $mdp!=''){
