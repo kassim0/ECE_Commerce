@@ -9,6 +9,10 @@ body{
     height: 100%;
 }
 
+.img-fluid{
+    width: 500px;
+}
+
 .b-height{
     position: relative;
     padding:35px 0px 0px;
@@ -22,11 +26,15 @@ body{
 } 
 .b-min-height{
     height: 650px;
-    background: #00bdaa;    
+    background: linear-gradient(#33FFFF, #3355FF);
+
 }
 .b-logo{
     width:100px;
 }
+
+
+
 .b-title{
     padding:100px 0px 0px;
 }
@@ -43,7 +51,7 @@ body{
     padding: 15px 85px;
     border-radius: 36px;
     border: 1.5px solid #fff;
-    background: transparent;
+    background: linear-gradient(#0404B4,#0B0B3B);
     color: #fff;
     text-transform: uppercase;
 }
@@ -55,7 +63,7 @@ body{
     margin:auto;
 }
 .b-form-title h1{
-    color: #00bdaa;
+    color: #3355FF;
     font-size: 34px;
     font-weight: 900;
 }
@@ -102,7 +110,7 @@ body{
     padding: 15px 85px;
     border-radius: 36px;
     border: 1.5px solid #fff;
-    background: #00bdaa;
+    background: linear-gradient(#33FFFF, #3355FF);
     color: #fff;
     text-transform: uppercase;
     margin-top:25px;
@@ -121,8 +129,11 @@ body{
 }
 .swift_right{
     display:none;
+}.swift_right{
+    display:none;
 }
-/*.swift_element{
+
+.swift_element{
     display:flex;
     align-items:unset;
     flex-direction: row-reverse;
@@ -131,6 +142,6 @@ body{
     -moz-transition:0.3s ease-in-out;
     -ms-transition:0.3s ease-in-out;
     -o-transition:0.3s ease-in-out;
-}*/
+}
 
 
