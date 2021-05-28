@@ -37,7 +37,7 @@
                  <li class="nav-item"><a class="nav-link" href="parcourir.php">Tout Parcourir</a></li>
                  <li class="nav-item"><a class="nav-link" href="Notifications.php">Notifications</a></li>
                  <li class="nav-item"><a class="nav-link" href="Panier.php">Panier</a></li>
-                 <li class="nav-item"><a class="nav-link" href="index.html">Votre Compte</a></li>
+                 <li class="nav-item"><a class="nav-link" href="index2.php">Votre Compte</a></li>
              </ul>
          </div>
     </nav>
@@ -45,34 +45,28 @@
 
 
 
-
+<form method="post" action="inscription.php">
     <div class="container">
     <div class="row align-items-center justify-content-center">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 b-height">
             <div class="row b-wrapper"> 
-
+                
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 b-min-height">
                     <div class="b-logo swift_left">
                         <img src="logoShopECE.png" class="img-fluid">
                     </div>
                     <div class="b-title text-center">
-                        <h1 class="user_title">Vous avez décidé de devenir vendeur</h1>
-                        <p>Encore un peu de patience.<br>Un administrateur vérifie votre compte et vous enverra un code par mail.</p>
-                        <!-- <button type="button" name="signin" ><a href="connexion.html"> Vendeur</a></button> -->
+                        <h1 class="user_title">Devenir vendeur</h1>
+                        <button type="submit" name="vendeur" > Vendeur</button>
                     </div>
                 </div>
                 
-
-
-
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                     <div class="b-form text-center">
                         <div class="b-form-title">
-                            <h1 class="user_title">Le CODE</h1>
+                            <h1 class="user_title">Devenir acheteur</h1>
                         </div>
-                        <input type="password"  id="inputPassword" placeholder="code">
-                            <!-- <button type="submit" name="signup" class="sign_up">Acheteur</button> -->
-                        </form>
+                            <button type="submit" name="acheteur" >Acheteur</button>
                     </div>
                 </div> 
 
@@ -80,6 +74,7 @@
         </div>
     </div>
 </div>
+</form>
 
 
 </body>

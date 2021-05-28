@@ -11,16 +11,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" type="text/css" href="firstpage.css">
-    <title>Log-In Sing-Up</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <title>Log-In Sing-Up</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
 <!-- <script src="main.js"></script> -->
 </head>
 <body>
 
-<!-- Navibar -->
+    <!-- Navibar -->
     <nav class="navbar navbar-expand-md">
          <a class="navbar-brand" href="index.php">
             <div class="b-logo swift_left">
@@ -36,11 +37,12 @@
                  <li class="nav-item"><a class="nav-link" href="parcourir.php">Tout Parcourir</a></li>
                  <li class="nav-item"><a class="nav-link" href="Notifications.php">Notifications</a></li>
                  <li class="nav-item"><a class="nav-link" href="Panier.php">Panier</a></li>
-                 <li class="nav-item"><a class="nav-link" href="index.html">Votre Compte</a></li>
+                 <li class="nav-item"><a class="nav-link" href="index2.php">Votre Compte</a></li>
              </ul>
          </div>
     </nav>
     <!-- fin Navibar -->
+
 
 
 
@@ -50,11 +52,11 @@
             <div class="row b-wrapper"> 
                 <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 b-min-height">
                     <div class="b-logo swift_left">
-                        <img src="logoShopECE.png" class="img-fluid"  style="width: 100px; height: 50px;">
+                        <img src="logoShopECE.png" class="img-fluid">
                     </div>
                     <div class="b-title text-center">
-                        <h1 class="user_title">Inscrivez-vous ici</h1>
-                        <button type="button" name="signin" ><a href="index.html">s'inscrire</a></button>
+                        <h1 class="user_title">Connectez-vous ici</h1>
+                        <button type="button" name="signin" ><a href="connexion.html"> Se connecter</a></button>
                     </div>
                 </div>
                 
@@ -64,9 +66,21 @@
                     </div>
                     <div class="b-form text-center">
                         <div class="b-form-title">
-                            <h1 class="form_title">Connexion</h1>
+                            <h1 class="form_title">Crée un compte</h1>
                         </div>
-                        <form method="post" action="session.php">
+                        <form method="post" action="Session.php">
+                            <div class="form-group username">
+                                <input class="form-control" type="text" name="nom" placeholder="Nom">
+                                <i class="fas fa-user b-font"></i>
+                            </div>
+                            <div class="form-group username">
+                                <input class="form-control" type="text" name="prenom" placeholder="Prenom">
+                                <i class="fas fa-user b-font"></i>
+                            </div>
+                            <div class="form-group username">
+                                <input class="form-control" type="text" name="pseudo" placeholder="Pseudo">
+                                <i class="fas fa-user b-font"></i>
+                            </div>
                             <div class="form-group">
                                 <input class="form-control" type="email" name="email" placeholder="Email">
                                 <i class="fas fa-envelope b-font"></i>
@@ -78,7 +92,7 @@
                             <div class="form-group">
                                 <span class="b-forgot"></span>
                             </div>
-                            <button type="submit" name="connexion" class="sign_up">Se connecter</button>
+                            <button type="submit" name="inscription" class="sign_up">S'inscrire</button>
                         </form>
                     </div>
                 </div> 
@@ -92,3 +106,10 @@
 </body>
 </html>
 
+<?php
+
+
+
+
+
+?>

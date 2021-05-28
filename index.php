@@ -38,7 +38,7 @@
 				 <li class="nav-item"><a class="nav-link" href="parcourir.php">Tout Parcourir</a></li>
 				 <li class="nav-item"><a class="nav-link" href="Notifications.php">Notifications</a></li>
 				 <li class="nav-item"><a class="nav-link" href="Panier.php">Panier</a></li>
-				 <li class="nav-item"><a class="nav-link" href="index.html">Votre Compte</a></li>
+				 <li class="nav-item"><a class="nav-link" href="index2.php">Votre Compte</a></li>
 			 </ul>
 		 </div>
  	</nav>
