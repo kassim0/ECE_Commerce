@@ -22,7 +22,7 @@
 	$db_found= mysqli_select_db($db_handle, $database);
 
 
-	if(empty($_POST["signup"])){
+	if(isset($_POST["signup"])){
 		if($db_found){
 			if($nom!="" && $prenom!="" && $pseudo!="" && $email!="" && $mdp!=""){
 				$sql="SELECT email FROM acheteur";
@@ -58,37 +58,6 @@
 
 
 
-	if(empty($_POST["signin"])){
-	
-		echo "bouton sign UP non appuyé <br>";
-		echo $nb."<br>";
-		if($db_found){
-			echo "fichier trouvé<br>";
-			$sql="SELECT email,mdp FROM acheteur";
-			$result = mysqli_query($db_handle, $sql);
-			while($data = mysqli_fetch_assoc($result)){
-
-				if($data['email']==$email){
-					echo "Email valide<br>";
-
-					if($data['mdp']==$mdp){
-						echo "mot de passe valide<br>";
-						$nb=1;
-
-
-					}else{echo "mot de passe invalide<br>";}
-
-				}else{echo "Email invalide<br>";}
-
-			}
-
-
-
-		}else{echo "fichier introuvable<br>";}
-
-
-
-	}else{echo "bouton sign IN non appuyé<br>";}
 
 
 
@@ -101,6 +70,10 @@
 
 
 
+
+
+
+// DELETE FROM `acheteur` WHERE `acheteur`.`id_utilisateur` = 12
 
 
 ?>
