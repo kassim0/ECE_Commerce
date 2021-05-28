@@ -44,6 +44,8 @@
 			 	 <button class="btn" name="meubles"> Meubles et objets d'art</button>
 			 	  <button class="btn" name="accessoire"> Accessoire VIP</button>
 			 	  <button class="btn" name="materiels"> Matériels scolaires</button>
+			 	  <button type="submit" name="add" class="btn btn-danger my-3">Ajouter au panier <i class="fas fa-shopping-cart"></i></button>
+				<input type='hidden' name='idarticle' >
 				
 			</form>
 			 
@@ -55,6 +57,7 @@
 
 	
 <?php
+
 
 $database = "eceshop";
 $db_handle = mysqli_connect('localhost', 'root', '');
@@ -77,12 +80,13 @@ while ($data = mysqli_fetch_assoc($result)) {
  
 echo	'<div class="col-lg-4">';	
 echo		'<div class="content">';
-echo		 '<img src = "data:image/jpd;base64,' . base64_encode($data['image']) . '" width = "75%"/>';
-
+echo			'<a class="article" href="pageArticle.php">';
+echo		 	'<img src = "data:image/jpd;base64,' . base64_encode($data['image']) . '" width = "75%"/>';
+echo           '</a>';
 echo		 '<h5>'.$data['nom'].'</h5>';
 echo		$data['prix'].'€';
 echo 		'<button type="submit" name="add" class="btn btn-danger my-3">Ajouter au panier <i class="fas fa-shopping-cart"></i></button>';
-echo         "<input type='hidden' name='product_id' >";
+echo         '<input type="hidden" name="idarticle" >';
 		
 echo		'</div>';
 echo	'</div>';
@@ -114,12 +118,13 @@ while ($data = mysqli_fetch_assoc($result)) {
  
 echo	'<div class="col-lg-4">';	
 echo		'<div class="content">';
-echo		 '<img src = "data:image/jpd;base64,' . base64_encode($data['image']) . '" width = "75%"/>';
-
+echo			'<a class="article" href="pageArticle.php">';
+echo		 	'<img src = "data:image/jpd;base64,' . base64_encode($data['image']) . '" width = "75%"/>';
+echo           '</a>';
 echo		 '<h5>'.$data['nom'].'</h5>';
 echo		$data['prix'].'€';
 echo 		'<button type="submit" name="add" class="btn btn-danger my-3">Ajouter au panier <i class="fas fa-shopping-cart"></i></button>';
-echo         "<input type='hidden' name='product_id' >";
+echo         "<input type='hidden' name='idarticle' >";
 		
 echo		'</div>';
 echo	'</div>';
@@ -151,12 +156,13 @@ while ($data = mysqli_fetch_assoc($result)) {
  
 echo	'<div class="col-lg-4">';	
 echo		'<div class="content">';
-echo		 '<img src = "data:image/jpd;base64,' . base64_encode($data['image']) . '" width = "75%"/>';
-
+echo			'<a class="article" href="pageArticle.php">';
+echo		 	'<img src = "data:image/jpd;base64,' . base64_encode($data['image']) . '" width = "75%"/>';
+echo           '</a>';
 echo		 '<h5>'.$data['nom'].'</h5>';
 echo		$data['prix'].'€';
 echo 		'<button type="submit" name="add" class="btn btn-danger my-3">Ajouter au panier <i class="fas fa-shopping-cart"></i></button>';
-echo         "<input type='hidden' name='product_id' >";
+echo         "<input type='hidden' name='idarticle' >";
 		
 echo		'</div>';
 echo	'</div>';
@@ -188,12 +194,13 @@ while ($data = mysqli_fetch_assoc($result)) {
  
 echo	'<div class="col-lg-4">';	
 echo		'<div class="content">';
-echo		 '<img src = "data:image/jpd;base64,' . base64_encode($data['image']) . '" width = "75%"/>';
-
+echo			'<a class="article" href="pageArticle.php">';
+echo		 	'<img src = "data:image/jpd;base64,' . base64_encode($data['image']) . '" width = "75%"/>';
+echo           '</a>';
 echo		 '<h5>'.$data['nom'].'</h5>';
 echo		$data['prix'].'€';
 echo 		'<button type="submit" name="add" class="btn btn-danger my-3">Ajouter au panier <i class="fas fa-shopping-cart"></i></button>';
-echo         "<input type='hidden' name='product_id' >";
+echo         "<input type='hidden' name='idarticle' >";
 		
 echo		'</div>';
 echo	'</div>';
@@ -225,12 +232,13 @@ while ($data = mysqli_fetch_assoc($result)) {
  
 echo	'<div class="col-lg-4">';	
 echo		'<div class="content">';
-echo		 '<img src = "data:image/jpd;base64,' . base64_encode($data['image']) . '" width = "75%"/>';
-
+echo			'<a class="article" href="pageArticle.php">';
+echo		 	'<img src = "data:image/jpd;base64,' . base64_encode($data['image']) . '" width = "75%"/>';
+echo           '</a>';
 echo		 '<h5>'.$data['nom'].'</h5>';
 echo		$data['prix'].'€';
 echo 		'<button type="submit" name="add" class="btn btn-danger my-3">Ajouter au panier <i class="fas fa-shopping-cart"></i></button>';
-echo         "<input type='hidden' name='product_id' >";
+echo         "<input type='hidden' name='idarticle' >";
 		
 echo		'</div>';
 echo	'</div>';
@@ -262,12 +270,13 @@ while ($data = mysqli_fetch_assoc($result)) {
  
 echo	'<div class="col-lg-4">';	
 echo		'<div class="content">';
-echo		 '<img src = "data:image/jpd;base64,' . base64_encode($data['image']) . '" width = "75%"/>';
-
+echo			'<a class="article" href="pageArticle.php">';
+echo		 	'<img src = "data:image/jpd;base64,' . base64_encode($data['image']) . '" width = "75%"/>';
+echo           '</a>';
 echo		 '<h5>'.$data['nom'].'</h5>';
 echo		$data['prix'].'€';
 echo 		'<button type="submit" name="add" class="btn btn-danger my-3">Ajouter au panier <i class="fas fa-shopping-cart"></i></button>';
-echo         "<input type='hidden' name='product_id' >";
+echo         "<input type='hidden' name='idarticle' >";
 		
 echo		'</div>';
 echo	'</div>';
@@ -299,12 +308,13 @@ while ($data = mysqli_fetch_assoc($result)) {
  
 echo	'<div class="col-lg-4">';	
 echo		'<div class="content">';
-echo		 '<img src = "data:image/jpd;base64,' . base64_encode($data['image']) . '" width = "75%"/>';
-
+echo			'<a class="article" href="pageArticle.php">';
+echo		 	'<img src = "data:image/jpd;base64,' . base64_encode($data['image']) . '" width = "75%"/>';
+echo           '</a>';
 echo		 '<h5>'.$data['nom'].'</h5>';
 echo		$data['prix'].'€';
 echo 		'<button type="submit" name="add" class="btn btn-danger my-3">Ajouter au panier <i class="fas fa-shopping-cart"></i></button>';
-echo         "<input type='hidden' name='product_id' >";
+echo         "<input type='hidden' name='idarticle' >";
 		
 echo		'</div>';
 echo	'</div>';
@@ -318,6 +328,53 @@ echo'</div>';
 echo "Database not found";
 }
 }
+
+
+if (isset($_POST["add"])) {
+if ($db_found) {
+
+$sql = "SELECT id,nom,image,prix FROM articles WHERE articles.id ='idarticle' ";
+
+//on ajoute 
+$sql = "INSERT INTO panier(idarticle, nom, image,prix)
+ VALUES('$id', '$nom', '$image', '$prix')"; 
+$result = mysqli_query($db_handle, $sql);
+echo "Add successful. <br>";
+//on affiche le nouveau livre ajouté
+// $sql = "SELECT * FROM panier";
+
+// $result = mysqli_query($db_handle, $sql);
+// echo "<h4>Informations sur le nouveau livre ajouté:</h4>";
+// echo "<table border='1'>";
+// echo "<tr>";
+// echo "<th>" . "ID" . "</th>";
+// echo "<th>" . "Titre" . "</th>";
+// echo "<th>" . "Auteur" . "</th>";
+// echo "<th>" . "Ann&eacute;e" . "</th>";
+// echo "<th>" . "Editeur" . "</th>";
+// echo "<th>" . "Couverture" . "</th>";
+// echo "</tr>";
+// while ($data = mysqli_fetch_assoc($result)) {
+// echo "<tr>";
+// echo "<td>" . $data['ID'] . "</td>";
+// echo "<td>" . $data['Titre'] . "</td>";
+// echo "<td>" . $data['Auteur'] . "</td>";
+// echo "<td>" . $data['Annee'] . "</td>";
+// echo "<td>" . $data['Editeur'] . "</td>";
+// $image = $data['Couverture'];
+// echo "<td>" . "<img src='$image' height='120' width='100'>" . 
+// "</td>";
+// echo "</tr>";
+// }
+// echo "</table>";
+
+} else {
+echo "Database not found. <br>";
+}
+}
+
+
+
 
 mysqli_close($db_handle);
 ?>
