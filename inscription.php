@@ -1,118 +1,103 @@
 <?php
-    session_start();
-?>
-<!DOCTYPE html>
-<html lang="en">
-<html>
-<head>
-    <title></title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" type="text/css" href="firstpage.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
-    <title>Log-In Sing-Up</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
-<!-- <script src="main.js"></script> -->
-</head>
-<body>
 
-    <!-- Navibar -->
-    <nav class="navbar navbar-expand-md">
-         <a class="navbar-brand" href="index.php">
-            <div class="b-logo swift_left">
-                        <img src="logoShopECE.png" alt="ECE Store" class="img-fluid" width="150" height="200">
-            </div>
-         </a>
-         <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
-            <span class="navbar-toggler-icon"></span>
-         </button>
-         <div class="collapse navbar-collapse" id="main-navigation">
-             <ul class="navbar-nav">
-                 <li class="nav-item"><a class="nav-link" href="Acceuil.php">Accueil</a></li>
-                 <li class="nav-item"><a class="nav-link" href="parcourir.php">Tout Parcourir</a></li>
-                 <li class="nav-item"><a class="nav-link" href="Notifications.php">Notifications</a></li>
-                 <li class="nav-item"><a class="nav-link" href="Panier.php">Panier</a></li>
-                 <li class="nav-item"><a class="nav-link" href="index.html">Votre Compte</a></li>
-             </ul>
-         </div>
-    </nav>
-    <!-- fin Navibar -->
+//on enrengistre les données dans des variables
+	$ID=0;
+	$nom=isset($_POST["nom"])? $_POST["nom"] : "";
+	$prenom=isset($_POST["prenom"])? $_POST["prenom"] : "";
+	$pseudo=isset($_POST["pseudo"])? $_POST["pseudo"] : "";
+	$email=isset($_POST["email"])? $_POST["email"] : "";
+	$mdp=isset($_POST["mdp"])? $_POST["mdp"] : "";
+	// $adresse=isset($_POST["adresse"])? $_POST["adresse"] : "";
+	// $codepostal=isset($_POST["codepostal"])? $_POST["codepostal"] : "";
+	// $ville=isset($_POST["ville"])? $_POST["ville"] : "";
+	// $tel=isset($_POST["tel"])? $_POST["tel"] : "";
+	$emailexist=0;
+	$nb=0;
+	$code=rand();
 
 
 
 
-    <div class="container">
-    <div class="row align-items-center justify-content-center">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 b-height">
-            <div class="row b-wrapper"> 
-                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 b-min-height">
-                    <div class="b-logo swift_left">
-                        <img src="logoShopECE.png" class="img-fluid">
-                    </div>
-                    <div class="b-title text-center">
-                        <h1 class="user_title">Connectez-vous ici</h1>
-                        <button type="button" name="signin" ><a href="Session.html"> Se connecter</a></button>
-                    </div>
-                </div>
-                
-                <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
-                    <div class="b-logo swift_right">
-                        <img src="logoShopECE.png" class="img-fluid" style="width: 100px; height: 50px;">
-                    </div>
-                    <div class="b-form text-center">
-                        <div class="b-form-title">
-                            <h1 class="form_title">Crée un compte</h1>
-                        </div>
-                        <form method="post" action="inscription.php">
-                            <div class="form-group username">
-                                <input class="form-control" type="text" name="nom" placeholder="Nom">
-                                <i class="fas fa-user b-font"></i>
-                            </div>
-                            <div class="form-group username">
-                                <input class="form-control" type="text" name="prenom" placeholder="Prenom">
-                                <i class="fas fa-user b-font"></i>
-                            </div>
-                            <div class="form-group username">
-                                <input class="form-control" type="text" name="pseudo" placeholder="Pseudo">
-                                <i class="fas fa-user b-font"></i>
-                            </div>
-                            <div class="form-group">
-                                <input class="form-control" type="email" name="email" placeholder="Email">
-                                <i class="fas fa-envelope b-font"></i>
-                            </div>
-                            <div class="form-group">
-                                <input class="form-control" type="password" name="mdp" placeholder="Mot de passe">
-                                <i class="fas fa-unlock-alt b-font"></i>
-                            </div>
-                            <div class="form-group">
-                                <span class="b-forgot"></span>
-                            </div>
-                            <button type="submit" name="inscription" class="sign_up">S'inscrire</button>
-                        </form>
-                    </div>
-                </div> 
-
-            </div>
-        </div>
-    </div>
-</div>
+	$database="eceshop";
+	$db_handle=mysqli_connect('localhost',"root",'');
+	$db_found= mysqli_select_db($db_handle, $database);
 
 
-</body>
-</html>
+	if(isset($_POST["inscription"])){
+		if($db_found){
+			if($nom!="" && $prenom!="" && $pseudo!="" && $email!="" && $mdp!=""){
+				$sql="SELECT email FROM acheteur";
+				$result = mysqli_query($db_handle, $sql);
+				while($data = mysqli_fetch_assoc($result)){
+
+					if($data['email']==$email){
+
+						
+						$emailexist=1;
+
+					}
+
+				}
+
+
+				if($emailexist==0){
+					$sql="INSERT INTO acheteur(nom,prenom,email,adresse,codepostal,ville,telephone,pseudo,mdp,pdp) VALUES ('$nom','$prenom','$email','',0,'',0,'$pseudo','$mdp',0)";
+					$result = mysqli_query($db_handle, $sql);
+					//echo "regarde la BDD<br>";
+					 echo "Inscription reussie, <br>cliquez "."<a href='compte.html'>"."ici"."</a>"." pour choisir votre compte<br>";
+					 $sql="SELECT id_utilisateur FROM acheteur WHERE email='bo@au' ";
+					 $result = mysqli_query($db_handle, $sql);
+					 while($data = mysqli_fetch_assoc($result)){
+
+					 echo "De plus votre ID est ".$data['id_utilisateur']."<br>";
+					 $ID=$data['id_utilisateur'];
+					 echo "Et dans le variable on a $ID";
+
+
+					}
+
+					
+					
+					
+
+
+				}else{echo "email deja existant<br>";}
+				
+
+			}else{echo "le formulaire n'est pas remplie<br>";}
+
+
+		}else{echo "fichier introuvable<br>";}
+
+	}//else{echo "bouton sign UP non appuyé <br>";}
+    
 
 
 
 
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// DELETE FROM `acheteur` WHERE `acheteur`.`id_utilisateur` = 12
 
 
 ?>
