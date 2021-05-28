@@ -56,7 +56,7 @@ body {
 }
 
 
-/* Content */
+
 .content {
   background-color: white;
   padding: 10px;
@@ -66,7 +66,7 @@ body {
   display: block;
 }
 
-/* Style the buttons */
+
 .btn {
   border: none;
   outline: none;
@@ -76,12 +76,12 @@ body {
   margin-left: 30px;
 }
 
-/* Add a grey background color on mouse-over */
+
 .btn:hover {
   background-color: #ddd;
 }
 
-/* Add a dark background color to the active button */
+
 .btn.active {
   background-color: #666;
    color: white;
