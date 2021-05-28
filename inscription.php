@@ -24,7 +24,7 @@
 	$db_found= mysqli_select_db($db_handle, $database);
 
 
-	if(isset($_POST["signup"])){
+	if(isset($_POST["inscription"])){
 		if($db_found){
 			if($nom!="" && $prenom!="" && $pseudo!="" && $email!="" && $mdp!=""){
 				$sql="SELECT email FROM acheteur";
@@ -72,24 +72,8 @@
 
 	}//else{echo "bouton sign UP non appuyé <br>";}
     
-     $ID=$data['id_utilisateur'];
 
 
-	// $nom2=$nom;
-	// $prenom2=$prenom;
-	// $pseudo2=$pseudo;
-	// $email2=$email;
-	// $mdp2=$mdp;
-
-
-
-
-	if(isset($_POST['vendeur'])){
-		echo "oui<br>";
-		echo "$ID";
-		// $sql="DELETE FROM acheteur WHERE acheteur.id_utilisateur=$data['id_utilisateur']";
-		// $result = mysqli_query($db_handle, $sql);
-		// echo "la donnée à été éffacé";
 
 
 
