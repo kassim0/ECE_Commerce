@@ -1,3 +1,9 @@
+<?php
+
+    session_start();
+
+  ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <html>
@@ -45,7 +51,7 @@
 
 
 
-<form method="post" action="inscription.php">
+<form method="post" action="envoiemail.php">
     <div class="container">
     <div class="row align-items-center justify-content-center">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 b-height">
@@ -57,7 +63,8 @@
                     </div>
                     <div class="b-title text-center">
                         <h1 class="user_title">Devenir vendeur</h1>
-                        <button type="submit" name="vendeur" > Vendeur</button>
+                        <!-- <button type="submit" name="vendeur" ><a href="attentevendeur1">Vendeur</a></button> -->
+                        <button type="submit" name="vendeur" >Vendeur</button>
                     </div>
                 </div>
                 
@@ -75,6 +82,11 @@
     </div>
 </div>
 </form>
+
+<?php
+
+    
+?>
 
 
 </body>
