@@ -14,15 +14,26 @@
 	$nb=0;
 	$code=rand();
 
-
-	$_SESSION['nom']=$nom;
-
-
-
-
-	$database="eceshop";
+$database="eceshop";
 	$db_handle=mysqli_connect('localhost',"root",'');
 	$db_found= mysqli_select_db($db_handle, $database);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 	if(isset($_POST["inscription"])){
@@ -46,8 +57,8 @@
 					$sql="INSERT INTO acheteur(nom,prenom,email,adresse,codepostal,ville,telephone,pseudo,mdp,pdp) VALUES ('$nom','$prenom','$email','',0,'',0,'$pseudo','$mdp',0)";
 					$result = mysqli_query($db_handle, $sql);
 					//echo "regarde la BDD<br>";
-					 echo "Inscription reussie, <br>cliquez "."<a href='compte.html'>"."ici"."</a>"." pour choisir votre compte<br>";
-					 $sql="SELECT id_utilisateur FROM acheteur WHERE email='bo@au' ";
+					 echo "Inscription reussie, <br>cliquez "."<a href='compte1.php'>"."ici"."</a>"." pour choisir votre compte<br>";
+					 $sql="SELECT id_utilisateur FROM acheteur WHERE email='$email' AND mdp='$mdp' ";
 					 $result = mysqli_query($db_handle, $sql);
 					 while($data = mysqli_fetch_assoc($result)){
 
@@ -88,11 +99,29 @@
 		}
 		else{
 			echo "connexion réussie<br>";
-			 echo "Cliquez "."<a href='compte.html'>"."ici"."</a>"." pour accéder à votre compte";
+			 echo "Cliquez "."<a href='compte1.php'>"."ici"."</a>"." pour accéder à votre compte";
 	}
 
 
 	}
+
+
+
+		$_SESSION['email']=$email;
+    $_SESSION['mdp']=$mdp;
+    if($db_found){
+    	if($email!='' || $mdp!=''){
+    	$sql="SELECT id_utilisateur, nom, prenom, pseudo FROM acheteur WHERE email='$email' AND mdp='$mdp'";
+    	$result = mysqli_query($db_handle, $sql);
+    	while($data = mysqli_fetch_assoc($result)){
+    		$_SESSION['nom']=$data['nom'];
+    		$_SESSION['prenom']=$data['prenom'];
+    		$_SESSION['pseudo']=$data['pseudo'];
+    		$_SESSION['ID']=$data['id_utilisateur'];
+
+    	}
+    }
+    }
 	
 
 
