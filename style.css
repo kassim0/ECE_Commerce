@@ -122,7 +122,7 @@ body{
 .swift_right{
     display:none;
 }
-.swift_element{
+/*.swift_element{
     display:flex;
     align-items:unset;
     flex-direction: row-reverse;
@@ -131,6 +131,6 @@ body{
     -moz-transition:0.3s ease-in-out;
     -ms-transition:0.3s ease-in-out;
     -o-transition:0.3s ease-in-out;
-}
+}*/
 
 
