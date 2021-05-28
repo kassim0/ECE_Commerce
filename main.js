@@ -3,9 +3,9 @@ $(document).ready(function(){
         var signButton = $(this).html();
         console.log(signButton);
         debugger;
-        if(signButton == 'Sign In'){
-            $('.sign_up').html('Sign In'); // sign up button text change
-            $('.sign_in').html('Sign Up'); // sign in button text change
+        if(signButton == 'se Connecter'){
+            $('.sign_up').html("se connecter"); // sign up button text change
+            $('.sign_in').html("S'inscrire"); // sign in button text change
             $('.swift_right').show(); // second logo show
             $('.b-forgot').show(); // forgot option show
             $('.form_title').html('Sign in to Guide'); // form title text change
@@ -17,16 +17,14 @@ $(document).ready(function(){
             $('.username').hide(); // form user field hide
             $('.b-wrapper').addClass('swift_element'); // add reverse
             $('.adress').hide();
-            $('.phone').hide();
         }else{
-            $('.sign_up').html('Sign Up'); // sign up button text change
-            $('.sign_in').html('Sign In'); // sign in button text change
+            $('.sign_up').html("s'inscrire"); // sign up button text change
+            $('.sign_in').html('se Connecter'); // sign in button text change
             $('.swift_right').hide(); // second logo hide
             $('.b-forgot').hide(); // forgot option hide
-            $('.form_title').html('Create Account');
-            $('.b-subtext').html('or use your email for registration');
-            $('.user_title').html('Welcome Friend');
-            $('.user_subTitle').html('To keep Connected with us please </br> login with your personal info.');
+            $('.form_title').html('Crée un compte');
+            $('.user_title').html('Connectez-vous ici');
+            //$('.user_subTitle').html('Ou connectez vous');
             $('.b-title').css('margin-top','0px');
             $('.swift_left').show();
             $('.username').show();

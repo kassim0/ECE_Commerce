@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="compte.css">
     <link rel="stylesheet" type="text/css" href="firstpage.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon"/>
     <title>Log-In Sing-Up</title>
@@ -50,49 +50,28 @@
     <div class="row align-items-center justify-content-center">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 b-height">
             <div class="row b-wrapper"> 
-                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 b-min-height">
+
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 b-min-height">
                     <div class="b-logo swift_left">
                         <img src="logoShopECE.png" class="img-fluid">
                     </div>
                     <div class="b-title text-center">
-                        <h1 class="user_title">Connectez-vous ici</h1>
-                        <button type="button" name="signin" ><a href="connexion.html"> Se connecter</a></button>
+                        <h1 class="user_title">Vous avez décidé de devenir vendeur</h1>
+                        <p>Encore un peu de patience.<br>Un administrateur vérifie votre compte et vous enverra un code par mail.</p>
+                        <!-- <button type="button" name="signin" ><a href="connexion.html"> Vendeur</a></button> -->
                     </div>
                 </div>
                 
-                <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
-                    <div class="b-logo swift_right">
-                        <img src="logoShopECE.png" class="img-fluid" style="width: 100px; height: 50px;">
-                    </div>
+
+
+
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                     <div class="b-form text-center">
                         <div class="b-form-title">
-                            <h1 class="form_title">Crée un compte</h1>
+                            <h1 class="user_title">Le CODE</h1>
                         </div>
-                        <form method="post" action="Session.php">
-                            <div class="form-group username">
-                                <input class="form-control" type="text" name="nom" placeholder="Nom">
-                                <i class="fas fa-user b-font"></i>
-                            </div>
-                            <div class="form-group username">
-                                <input class="form-control" type="text" name="prenom" placeholder="Prenom">
-                                <i class="fas fa-user b-font"></i>
-                            </div>
-                            <div class="form-group username">
-                                <input class="form-control" type="text" name="pseudo" placeholder="Pseudo">
-                                <i class="fas fa-user b-font"></i>
-                            </div>
-                            <div class="form-group">
-                                <input class="form-control" type="email" name="email" placeholder="Email">
-                                <i class="fas fa-envelope b-font"></i>
-                            </div>
-                            <div class="form-group">
-                                <input class="form-control" type="password" name="mdp" placeholder="Mot de passe">
-                                <i class="fas fa-unlock-alt b-font"></i>
-                            </div>
-                            <div class="form-group">
-                                <span class="b-forgot"></span>
-                            </div>
-                            <button type="submit" name="inscription" class="sign_up">S'inscrire</button>
+                        <input type="password"  id="inputPassword" placeholder="code">
+                            <!-- <button type="submit" name="signup" class="sign_up">Acheteur</button> -->
                         </form>
                     </div>
                 </div> 
@@ -105,11 +84,3 @@
 
 </body>
 </html>
-
-<?php
-
-
-
-
-
-?>
