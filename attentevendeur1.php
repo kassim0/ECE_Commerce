@@ -62,9 +62,10 @@
                     <div class="b-logo swift_left">
                         <img src="logoShopECE.png" class="img-fluid">
                     </div>
+
                     <div class="b-title text-center">
                         <h1 class="user_title">Vous avez décidé de devenir vendeur</h1>
-                        <p>Encore un peu de patience.<br>Un administrateur vérifie votre compte et vous enverra un code par mail.</p>
+                        <p>Il reste plus qu'une étape.<br>Utilisé le code qu'un de vos amis administrateur vous à donnée.</p>
                         <!-- <button type="button" name="signin" ><a href="connexion.html"> Vendeur</a></button> -->
                     </div>
                 </div>
@@ -74,10 +75,13 @@
 
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                     <div class="b-form text-center">
+                        <form method="post" action="compte.php">
                         <div class="b-form-title">
                             <h1 class="user_title">Le CODE</h1>
                         </div>
-                        <input type="password"  id="inputPassword" placeholder="code">
+
+                        <input type="number"  name="code" placeholder="code">
+                        <button type="submit" name="confirme" class="btn btn-primary mb-2">Confirmé</button>
                             <!-- <button type="submit" name="signup" class="sign_up">Acheteur</button> -->
                         </form>
                     </div>
