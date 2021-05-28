@@ -34,7 +34,7 @@
              <ul class="navbar-nav">
                  <li class="nav-item"><a class="nav-link" href="Acceuil.php">Accueil</a></li>
                  <li class="nav-item"><a class="nav-link" href="parcourir.php">Tout Parcourir</a></li>
-                 <li class="nav-item"><a class="nav-link" href="Notifications.php">Notifications</a></li>
+                 <li class="nav-item"><a class="nav-link" href="Notif.php">Notifications</a></li>
                  <li class="nav-item"><a class="nav-link" href="Panier.php">Panier</a></li>
                  <li class="nav-item"><a class="nav-link" href="index2.php">Votre Compte</a></li>
              </ul>
