@@ -1,13 +1,40 @@
 <?php
+echo '<head>';
+echo '<title>Notifications</title>';
 echo "<meta charset=\"utf-8\">";
+echo '<link rel="icon" href="favicon.ico" type="image/x-icon"/>';
+echo '<meta name="viewport" content="width=device-width, initial-scale=1">';
+echo '<link rel="stylesheet" type="text/css" href="firstpage.css">';
 echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"Notifications.css\">";
 echo '<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">';
 echo  '<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>';
 echo  '<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> ';
+echo '</head>';
+
 
 $database = "eceshop";
 $db_handle = mysqli_connect('localhost', 'root', '');
 $db_found = mysqli_select_db($db_handle, $database);
+echo '<body>';
+echo '<nav class="navbar navbar-expand-md">';
+echo		 '<a class="navbar-brand" href="index.php">';
+echo		 	'<div class="b-logo swift_left">';
+echo                        '<img src="logoShopECE.png" alt="ECE Store" class="img-fluid" width="150" height="200">';
+echo            '</div>';
+echo		 '</a>';
+echo		 '<button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">';
+echo		 	'<span class="navbar-toggler-icon"></span>';
+echo		 '</button>';
+echo		 '<div class="collapse navbar-collapse" id="main-navigation">';
+echo			 '<ul class="navbar-nav">';
+echo				 '<li class="nav-item"><a class="nav-link" href="Acceuil.php">Accueil</a></li>';
+echo				 '<li class="nav-item"><a class="nav-link" href="parcourir.php">Tout Parcourir</a></li>';
+echo				 '<li class="nav-item"><a class="nav-link" href="Notif.php">Notifications</a></li>';
+echo				 '<li class="nav-item"><a class="nav-link" href="Panier.php">Panier</a></li>';
+echo				 '<li class="nav-item"><a class="nav-link" href="index2.php">Votre Compte</a></li>';
+echo			 '</ul>';
+echo		 '</div>';
+echo 	'</nav>';
 
 echo '<h1>Vos critères</h1>';
 echo 	'<form method="post" action="Notif.php">';
@@ -98,6 +125,18 @@ echo'</div>';
 echo "<br>Votre produits n'est pas disponible, vous pouvez activer la cloche de notification qui vous informera s'il est à nouveau disponible";
 }
 
+echo '<footer class="page-footer">';
+echo		 '<div class="container">';
+echo			 '<div class="row">';
+echo				 '<div class="col-lg-8 col-md-8 col-sm-12">';
+				 	
+echo				 '</div>';
+echo				'</div>';
+echo			 '<div class="footer-copyright text-center">Copyright &copy; 2021 ECE Store';
+			 
+echo		'</div>';
+echo	'</footer>';
+echo '</body>';
 
 
 mysqli_close($db_handle);
