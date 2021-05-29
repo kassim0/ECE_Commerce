@@ -42,13 +42,13 @@
 	 <div id="carouselArticle" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="image6.png" alt="First slide">
+      <img class="d-block w-100" src="image/cahier oxford.jpg" alt="First slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="image2.png" alt="Second slide">
+      <img class="d-block w-100" src="image/vip1.png" alt="Second slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="image3.png" alt="Third slide">
+      <img class="d-block w-100" src="image/meuble2.jpg" alt="Third slide">
     </div>
   </div>
 
@@ -128,7 +128,7 @@
 
   <div class="col-lg-4">
     <div class="content">
-      <img src="image1.png" alt="image" style="width:100%">
+      <img src="image/vip2.jpg" alt="image" style="width:100%">
       <h4>Image6</h4>
       <p>Lorem ipsum dolor..</p>
     </div>
@@ -136,7 +136,7 @@
 
   <div class="col-lg-4">
     <div class="content">
-      <img src="image4.png" alt="image" style="width:100%">
+      <img src="image/meuble1.jpg" alt="image" style="width:100%">
       <h4>image7</h4>
       <p>Lorem ipsum dolor..</p>
     </div>
@@ -144,7 +144,7 @@
 
   <div class="col-lg-4">
     <div class="content">
-      <img src="image3.png" alt="Image" style="width:100%">
+      <img src="image/ordinateuretudiant.jpg" alt="Image" style="width:115%">
       <h4>Image3</h4>
       <p>Lorem ipsum dolor..</p>
     </div>
@@ -152,7 +152,7 @@
 
   <div class="col-lg-4">
     <div class="content">
-      <img src="image5.jpg" alt="image" style="width:100%">
+      <img src="image/collier.jpg" alt="image" style="width:75%">
       <h4>Image5</h4>
       <p>Lorem ipsum dolor..</p>
     </div>
@@ -160,7 +160,7 @@
 
    <div class="col-lg-4">
     <div class="content">
-      <img src="image5.jpg" alt="image" style="width:100%">
+      <img src="image/11fb9bf9136a91f50967c76df0e31744.jpg" alt="image" style="width:100%">
       <h4>Image5</h4>
       <p>Lorem ipsum dolor..</p>
     </div>
@@ -168,7 +168,7 @@
 
    <div class="col-lg-4">
     <div class="content">
-      <img src="image5.jpg" alt="image" style="width:100%">
+      <img src="image/vip1.png" alt="image" style="width:75%">
       <h4>Image5</h4>
       <p>Lorem ipsum dolor..</p>
     </div>
