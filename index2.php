@@ -59,6 +59,11 @@
                         <button type="button" name="signin" ><a href="connexion1.php"> Se connecter</a></button>
                     </div>
                 </div>
+                                        <?php
+                        if(isset($_SESSION['nom'])){
+
+
+                        ?>
                 
                 <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
                     <div class="b-logo swift_right">
@@ -68,6 +73,7 @@
                         <div class="b-form-title">
                             <h1 class="form_title">Crée un compte</h1>
                         </div>
+
                         <form method="post" action="Session.php">
                             <div class="form-group username">
                                 <input class="form-control" type="text" name="nom" placeholder="Nom">
@@ -94,6 +100,9 @@
                             </div>
                             <button type="submit" name="inscription" class="sign_up">S'inscrire</button>
                         </form>
+                        <?php
+                    }
+                        ?>
                     </div>
                 </div> 
 
