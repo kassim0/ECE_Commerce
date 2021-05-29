@@ -1,3 +1,8 @@
+<?php
+    session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <html>
@@ -73,6 +78,20 @@
                             </div>
                             <div class="form-group">
                                 <input class="form-control" type="password" name="mdp" placeholder="Mot de passe">
+                                <i class="fas fa-unlock-alt b-font"></i>
+                            </div>
+                            <div class="form-group">
+                                <!-- <div class="custom-select" style="width:230px;"> -->
+                                  
+                                    <!-- <option name="choix" value="0">Selectionner votre rôle:</option>
+                                    <option name="choix" value="1">Acheteur</option>
+                                    <option name="choix" value="2">Vendeur</option>
+                                    <option name="" value="3">Administrateur</option> -->
+                                    <input type="radio" name="choix" value="1">Acheteur<br>
+                                    <input type="radio" name="choix" value="2">Vendeur<br>
+                                    <input type="radio" name="choix" value="3">Administrateur<br>
+                               
+<!--                                 </div> -->
                                 <i class="fas fa-unlock-alt b-font"></i>
                             </div>
                             <div class="form-group">
