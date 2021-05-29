@@ -1,6 +1,6 @@
 <?php
 
-
+session_start();
 
 
 //on enrengistre les données dans des variables
