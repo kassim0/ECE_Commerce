@@ -1,5 +1,6 @@
 <?php
 	require("configuration/commandes.php");
+	session_start
 
 	$Articles=afficher();
 ?>
