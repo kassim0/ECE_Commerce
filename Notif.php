@@ -36,6 +36,8 @@ echo			 '</ul>';
 echo		 '</div>';
 echo 	'</nav>';
 
+
+
 echo '<h1>Vos critères</h1>';
 echo 	'<form method="post" action="Notif.php">';
 echo 	'<table border="1">';
@@ -122,8 +124,17 @@ echo 	'</div>';
 echo'</div>';
 
 } else {
-echo "<br>Votre produits n'est pas disponible, vous pouvez activer la cloche de notification qui vous informera s'il est à nouveau disponible";
+echo "<br>Votre produit n'est pas disponible, vous pouvez placer le boutton sur ON, pour activer les notifications qui vous informeront s'il est à nouveau disponible";
 }
+
+echo "<p class='okay'>Si votre produit n'est pas disponible, vous pouvez placer le boutton sur ON, pour activer les notifications qui vous informeront s'il est à nouveau disponible</p>";
+echo '<center>';
+echo '<label class="switch">';
+echo   '<input type="checkbox">';
+echo   '<span class="slider round"></span>';
+echo '</label>';
+
+echo '</center>';
 
 echo '<footer class="page-footer">';
 echo		 '<div class="container">';
