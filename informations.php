@@ -7,7 +7,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Votre compte</title>
+	<title>Mes informations</title>
 	<link rel="icon" href="favicon.ico" type="image/x-icon"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet"
@@ -16,7 +16,16 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="pageArticle.css">
-	<link rel="stylesheet" type="text/css" href="pageacheteur.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+
+.container{
+margin-top: 30px;
+
+}
+
+
+</style>
 </head>
 <body>
 	<!--la navigation-->
@@ -39,3 +48,71 @@
 			 </ul>
 		 </div>
  	</nav>
+
+
+
+<!-- Formulaire -->
+
+<div class="container">
+    <div class="b-logo swift_right">
+        <img src="logoShopECE.png" class="img-fluid" style="width: 100px; height: 50px;">
+    </div>
+    <div class="b-form text-center">
+        <div class="b-form-title">
+            <h1 class="form_title">Mes informations</h1>
+        </div>
+        <form method="post" action="Session.php">
+            <div class="form-group username">
+                <input class="form-control" type="text" name="nom" placeholder="Nom: <?php echo $_SESSION['nom']?>">
+                <i class="fas fa-user b-font"></i>
+            </div>
+            <div class="form-group username">
+                <input class="form-control" type="text" name="prenom" placeholder="Prenom: <?php echo $_SESSION['prenom']?>">
+                <i class="fas fa-user b-font"></i>
+            </div>
+            <div class="form-group username">
+                <input class="form-control" type="text" name="pseudo" placeholder="Pseudo: <?php echo $_SESSION['pseudo']?>">
+                <i class="fas fa-user b-font"></i>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="email" name="email" placeholder="Email: <?php echo $_SESSION['email']?>">
+                <i class="fas fa-envelope b-font"></i>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="password" name="mdp" placeholder="Changer de mot de passe">
+                <i class="fas fa-unlock-alt b-font"></i>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="adresse" placeholder="Adresse: <?php echo $_SESSION['adresse']?>">
+                <i class="fas fa-home b-font"></i>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="codepostal" placeholder="Code postal: <?php echo $_SESSION['codepostal']?>">
+                <i class="fas fa-city b-font"></i>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="ville" placeholder="Ville: <?php echo $_SESSION['ville']?>">
+                <i class="fas fa-city b-font"></i>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="tel" placeholder="Téléphone: <?php echo $_SESSION['tel']?>">
+                <i class="	fas fa-phone b-font"></i>
+            </div>
+            <div class="form-group">
+                <span class="b-forgot"></span>
+            </div>
+            <button type="submit" name="enregistre" class="sign_up">Enrengistrer</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+</body>
+</html>
+
+
