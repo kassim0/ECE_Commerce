@@ -18,11 +18,11 @@
 	<link rel="stylesheet" type="text/css" href="pageArticle.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<style type="text/css">
-
 .container{
-margin-top: 30px;
+margin-top: 50px;
 
 }
+
 
 
 </style>
@@ -61,28 +61,28 @@ margin-top: 30px;
         <div class="b-form-title">
             <h1 class="form_title">Mes informations</h1>
         </div>
-        <form method="post" action="Session.php">
+        <form method="post" action="modifications.php">
             <div class="form-group username">
-                <input class="form-control" type="text" name="nom" placeholder="Nom: <?php echo $_SESSION['nom']?>">
-                <i class="fas fa-user b-font"></i>
-            </div>
-            <div class="form-group username">
-                <input class="form-control" type="text" name="prenom" placeholder="Prenom: <?php echo $_SESSION['prenom']?>">
-                <i class="fas fa-user b-font"></i>
+                <h3>Nom: <?php echo $_SESSION['nom']?></h3>
+                <!-- <i class="fas fa-user b-font"></i> -->
             </div>
             <div class="form-group username">
-                <input class="form-control" type="text" name="pseudo" placeholder="Pseudo: <?php echo $_SESSION['pseudo']?>">
-                <i class="fas fa-user b-font"></i>
+                <h3>Prenom: <?php echo $_SESSION['prenom']?></h3>
+                <!-- <i class="fas fa-user b-font"></i> -->
+            </div>
+            <div class="form-group username">
+                <h3>Pseudo: <?php echo $_SESSION['pseudo']?></h3>
+                <!-- <i class="fas fa-user b-font"></i> -->
             </div>
             <div class="form-group">
-                <input class="form-control" type="email" name="email" placeholder="Email: <?php echo $_SESSION['email']?>">
-                <i class="fas fa-envelope b-font"></i>
+                <h3>Email: <?php echo $_SESSION['email']?></h3>
+                <!-- <i class="fas fa-envelope b-font"></i> -->
             </div>
             <div class="form-group">
-                <input class="form-control" type="password" name="mdp" placeholder="Changer de mot de passe">
-                <i class="fas fa-unlock-alt b-font"></i>
+                <h3>Mot de passe: <?php echo $_SESSION['mdp']?></h3>
+                <!-- <i class="fas fa-unlock-alt b-font"></i> -->
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <input class="form-control" type="text" name="adresse" placeholder="Adresse: <?php echo $_SESSION['adresse']?>">
                 <i class="fas fa-home b-font"></i>
             </div>
@@ -97,13 +97,14 @@ margin-top: 30px;
             <div class="form-group">
                 <input class="form-control" type="text" name="tel" placeholder="Téléphone: <?php echo $_SESSION['tel']?>">
                 <i class="	fas fa-phone b-font"></i>
-            </div>
+            </div> -->
             <div class="form-group">
                 <span class="b-forgot"></span>
             </div>
-            <button type="submit" name="enregistre" class="sign_up">Enrengistrer</button>
+            <!-- <button type="submit" name="enregistre" class="sign_up" >Retour</button> -->
         </form>
     </div>
+
 </div>
 
 
