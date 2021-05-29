@@ -73,7 +73,7 @@
                         <div class="b-form-title">
                             <h1 class="user_title">Devenir acheteur</h1>
                         </div>
-                            <button type="submit" name="acheteur" >Acheteur</button>
+                            <button type="submit" name="acheteur" ><a href="pageacheteur.php">Acheteur</a></button>
                     </div>
                 </div> 
 
