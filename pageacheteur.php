@@ -33,9 +33,9 @@
 			 <ul class="navbar-nav">
 				 <li class="nav-item"><a class="nav-link" href="Acceuil.php">Accueil</a></li>
 				 <li class="nav-item"><a class="nav-link" href="parcourir.php">Tout Parcourir</a></li>
-				 <li class="nav-item"><a class="nav-link" href="Notifications.php">Notifications</a></li>
+				 <li class="nav-item"><a class="nav-link" href="Notif.php">Notifications</a></li>
 				 <li class="nav-item"><a class="nav-link" href="Panier.php">Panier</a></li>
-				 <li class="nav-item"><a class="nav-link" href="index2.php">Votre Compte</a></li>
+				 <li class="nav-item"><a class="nav-link" href="pageacheteur.php">Votre Compte</a></li>
 			 </ul>
 		 </div>
  	</nav>
@@ -75,6 +75,11 @@
  				<div class="col-lg-4">  
  					<h1><i class="	fas fa-shopping-cart icone"></i></h1>
  					<p>Mes comandes</p>
+ 				</div>
+
+ 				<div class="col-lg-4">  
+ 					<h1><a href="deconnexion.php"><i class="	fas fa-door-open icone"></i></a></h1>
+ 					<p>Déconnexion</p>
  				</div>
  			</div>
  		</div>
