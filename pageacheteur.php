@@ -7,7 +7,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Page Article</title>
+	<title>Votre compte</title>
 	<link rel="icon" href="favicon.ico" type="image/x-icon"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet"
@@ -16,6 +16,7 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="pageArticle.css">
+	<link rel="stylesheet" type="text/css" href="pageacheteur.css">
 </head>
 <body>
 	<!--la navigation-->
@@ -41,22 +42,57 @@
 
  	<!-- La photo de profil -->
  	<main>
- 		<div class="container">
+ 		<div class="container" >
  			<div class="row">
- 				<div class="col-lg-5" >
+ 				<div class="col-lg-5" id="leftPart" >
  					<h1>Compte Acheteur</h1>
  					<div class="container">
  						<div class="row element">
  							<div class="col-lg-8">
  								<img src="./image/pdpdefaut.png" alt="pdp">
- 								
+ 								<h4><?php echo $_SESSION['pseudo'];  ?></h4>
  							</div>
  						</div>
  					</div>
  				</div>
  			</div>
  		</div>
+
+ 		<section id="contanier2">
+ 		<div class="container" >
+ 			<div class="row">
+
+ 				<div class="col-lg-4">  
+ 					<h1><a href="informations.php"><i class="fas fa-user-alt icone"></i></a></h1>
+ 					<p>Mes informations</p>
+ 				</div>
+
+ 				<div class="col-lg-4">  
+ 					<h1><i class="	fas fa-money-check icone"></i></h1>
+ 					<p>Mes coordonnées bancaire</p>
+ 				</div>
+
+ 				<div class="col-lg-4">  
+ 					<h1><i class="	fas fa-shopping-cart icone"></i></h1>
+ 					<p>Mes comandes</p>
+ 				</div>
+ 			</div>
+ 		</div>
+ 		</section>
  	</main>
+
+
+ 	<footer class="page-footer  ">
+		 <div class="container">
+			 <div class="row">
+				 <div class="col-lg-8 col-md-8 col-sm-12">
+				 	
+				 </div>
+				</div>
+			 <div class="footer-copyright text-center">Copyright &copy; 2021 ECE Store
+			 
+		</div>
+	</footer>
 
 </body>
 </html>
