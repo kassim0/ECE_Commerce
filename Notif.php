@@ -1,4 +1,8 @@
 <?php
+
+
+    session_start();
+
 echo '<head>';
 echo '<title>Notifications</title>';
 echo "<meta charset=\"utf-8\">";
