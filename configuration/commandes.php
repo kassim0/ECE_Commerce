@@ -31,6 +31,17 @@ function selectCartProductForUser($authenticatedPersonId)
 	}
 }
 
+function removeProductFromCart($productId, $userId)
+{
+	if (require("connexion.php")) {
+		$var = $access->prepare("DELETE FROM panier WHERE id_article = $productId AND id_acheteur = $userId");
+		$var->execute();
+		$data = $var->fetchAll(PDO::FETCH_OBJ);
+		$var->closeCursor();
+		return $data;
+	}
+}
+
 function afficher()
 {
 	if (require("connexion.php")) {

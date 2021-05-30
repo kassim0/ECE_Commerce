@@ -8,13 +8,7 @@ $itemCount = count($cartArticles);
 
 if (isset($_POST['remove'])) {
 	if ($_GET['action'] == 'remove') {
-		foreach ($_SESSION['cart'] as $key => $value) {
-			if ($value['product_id'] == $_GET['id']) {
-				unset($_SESSION['cart'][$key]);
-				echo "<script>alert('Product has been Removed...!')</script>";
-				echo "<script>window.location ='cart.php'</script>";
-			}
-		}
+		removeProductFromCart($_GET['id'], 1);
 	}
 }
 
@@ -51,6 +45,9 @@ if (isset($_POST['remove'])) {
 
 <body class="bg-light">
 
+	<?php
+	require_once('header.php');
+	?>
 	<div class="container-fluid">
 		<div class="row px-5">
 			<div class="col-md-7">
@@ -63,8 +60,8 @@ if (isset($_POST['remove'])) {
 					$total = 0;
 
 					if (count($cartArticles) > 0) {
-						foreach ($Articles as $article) {
-							component($article->nom, $article->prix, $article->image, $article->id);
+						foreach ($cartArticles as $article) {
+							cartElement($article->nom, $article->prix, $article->image, $article->id);
 							$total = $total + $article->prix;
 						}
 					} else {
