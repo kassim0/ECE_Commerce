@@ -30,13 +30,61 @@ $database="eceshop";
 
 
 
+if (isset($_POST["id"])){
+	    echo "oui<br>";
+		echo $_SESSION['ID']."<br>";
+		$id = $_POST["id"];
+		echo $id."<br>";
 
+       $sql="SELECT * FROM articles WHERE id = $id";
+       $result = mysqli_query($db_handle, $sql);
+       while($data = mysqli_fetch_assoc($result)){
+       	$_SESSION['image_article']=$data['image'];
+       	$_SESSION['nom_article']=$data['nom'];
+       	$_SESSION['description_article']=$data['description'];
+       	$_SESSION['prix_article']=$data['prix'];
+       	$_SESSION['categorie_article']=$data['categorie'];
+       	$_SESSION['achat_article']=$data['modedachat'];
+       	$_SESSION['date_article']=$data['datepublication'];
+       	$_SESSION['user_article']=$data['id_utilisateur'];
 
+       	$image=$_SESSION['image_article'];
+       	$nom_article=$_SESSION['nom_article'];
+       	$description=$_SESSION['description_article'];
+       	$prix=$_SESSION['prix_article'];
+       	$categorie=$_SESSION['categorie_article'];
+       	$modedachat=$_SESSION['achat_article'];
+       	$id_utilisateur=$_SESSION['user_article'];
+       	echo $id.$nom_article.$prix.$description.$categorie.$modedachat.$id_utilisateur;
+       }
 
+       $article=mysqli_fetch_assoc(mysqli_query($db_handle, $sql));
+       // $sql="INSERT INTO panier(id,image, nom,prix, description,categorie, modedachat, id_utilisateur) VALUES ($id,'$image','$nom_article',$prix,'$description','$categorie','$modedachat',$id_utilisateur)";
+       // $sql="INSERT INTO panier(id,image, nom,prix, description,categorie, modedachat, id_utilisateur) VALUES (:id,:image,:nom_article,:prix,:description,:categorie,:modedachat,:id_utilisateur)";
 
+		// $result = mysqli_query($db_handle, $sql);
+		//echo "article ajouter au panier";
+       try{
+		$access=new pdo("mysql:host=localhost;dbname=eceshop;charset=utf8","root","");
+		$access->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+	}catch(Exception $e)
+	{
+		$e->getMessage();
+	}
+		$stmt = $access->prepare("INSERT INTO panier(id,image, nom,prix, description,categorie, modedachat, id_utilisateur) VALUES (:id,:image,:nom_article,:prix,:description,:categorie,:modedachat,:id_utilisateur)");
+		$stmt->bindParam(':id', 1);
+		$stmt->bindParam(':image', 0);
+		$stmt->bindParam(':nom_article', 'peinture');
+		$stmt->bindParam('prix:', 50);
+		$stmt->bindParam(':description', 'oui');
+		$stmt->bindParam(':categorie', 'non');
+		$stmt->bindParam(':modedachat', 'mode');
+		$stmt->bindParam(':id_utilisateur', 3);
+		$stmt->execute();
+		$stmt->closeCursor();
+		echo "article ajouté";
 
-
-
+	}
 
 
 
@@ -113,7 +161,6 @@ $database="eceshop";
 		if($nb==0){
 		echo "Email ou mot de passe invalide<br>";
 		 echo "<a href='connexion1.php'>"."retourner à la page de connexion"."</a>";
-		//echo "retourner à la page de connexion";
 		}
 		else{
 			echo "connexion réussie<br>";

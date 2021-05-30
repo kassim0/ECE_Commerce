@@ -220,6 +220,7 @@ body {
 
 
 <!--fin article du jour-->
+<form action="Session.php" method="post" >
 <section id="new">
 	<h1 id="nouveau">Nouveaux articles</h1>
 <div class="container">
@@ -243,17 +244,17 @@ if (mysqli_num_rows($result) == 0) {
 
 while ($data = mysqli_fetch_assoc($result)) {
 	
-	echo('
+echo('
 		<div class="col-lg-4">
     <div class="content">
 	
       <img src="data:image/jpd;base64,'. base64_encode($data['image']) . '" alt="image" style="width:100%">
       <h4>'.$data['nom'].'</h4>
       <p>'.$data['prix'].'€</p>
-	  <form action="Session.php" method="post" >
-	  <input type="hidden" name="id" value="'.$data['id'].'"
-	  <button type="submit" name="id" class="btn btn-danger my-3">Ajouter au panier <i class="fas fa-shopping-cart"></i></button>
-	  </form>
+	  
+	  
+	  <button type="submit" name="id" value="'.$data['id'].'" class="btn btn-danger my-3">Ajouter au panier <i class="fas fa-shopping-cart"></i></button>
+	  
     </div>
   </div>'
 	);
@@ -271,6 +272,7 @@ echo 'console.log('.$e->getMessage().')';
  </div>
 </div>
 </section>
+</form>
 <!--Fin section de jour-->
 
 

@@ -18,6 +18,13 @@
 	<link rel="stylesheet" type="text/css" href="pageArticle.css">
 	<link rel="stylesheet" type="text/css" href="pageacheteur.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+.page-footer{
+margin-top: 500px;
+
+}
+
+</style>
 </head>
 <body>
 	<!--la navigation-->

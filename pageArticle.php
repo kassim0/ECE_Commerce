@@ -40,13 +40,23 @@ text-decoration: underline;
   padding: 12px 16px;
   background-color: white;
   cursor: pointer;
-  margin-left: 30px;
+  margin-left: 50%;
+  margin-bottom: 30px;
   background-color: #ddd;
     background-color: #666;
    color: white;
 }
 
+#presentaion button{
 
+border-radius: 30px;
+
+}
+
+.panier{
+border-radius: 30px;
+background: linear-gradient(#33FFFF, #3355FF);
+}
 
 
 
@@ -86,11 +96,11 @@ text-decoration: underline;
 		<div class="row">
 				<img src="image/vip2.jpg" alt="image" style="width:100%">
 				<div class="container" id="description">
-						<p>Description de l'article... Voiture lamborghini aventador en très bonne état</p>
+						<p>Voiture lamborghini aventador en très bonne état</p>
 				</div>
 				<div class="container" id="Prix">
 						<h2>1000000$</h2>
-						<button type="submit" class="panier" name="panier"><a href="#">Ajouter au panier</button>
+						<button type="submit" class="panier" name="panier"><a href="panier.php">Ajouter au panier</button>
 				</div>
 		</div>
 	</div>
