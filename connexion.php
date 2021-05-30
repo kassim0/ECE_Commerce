@@ -63,10 +63,3 @@ session_start();
 		echo "connexion réussie<br>";
 		 echo "Cliquez "."<a href='compte.html'>"."ici"."</a>"." pour accéder à votre compte";
 	}
-
-
-
-
-
-
-?>

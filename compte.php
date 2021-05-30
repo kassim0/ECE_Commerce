@@ -45,9 +45,3 @@
 	 		   }else{echo "le code est érroné.<br>";}
 
 	    }
-
-	
-
-
-
-?>

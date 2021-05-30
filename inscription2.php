@@ -98,6 +98,3 @@ session_start();
 
 
 // DELETE FROM `acheteur` WHERE `acheteur`.`id_utilisateur` = 12
-
-
-?>

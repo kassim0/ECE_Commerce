@@ -155,4 +155,3 @@ echo '</body>';
 
 
 mysqli_close($db_handle);
-?>
