@@ -2,7 +2,6 @@
     session_start();
 	
 	if(!isset($_SESSION['user'])){
-		echo 'index2.php';
 	}
 	if(!isset($_SESSION['panier'])){
 		$_SESSION['panier'] = [];
@@ -78,7 +77,7 @@
 					}
 	}
 }
-}
+
 
 
 ?>
