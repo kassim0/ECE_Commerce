@@ -253,7 +253,7 @@ echo('
       <p>'.$data['prix'].'€</p>
 	  
 	  
-	  <button type="submit" name="id" value="'.$data['id'].'" class="btn btn-danger my-3">Ajouter au panier <i class="fas fa-shopping-cart"></i></button>
+	  <button type="submit" href="Panier.php" name="id" value="'.$data['id'].'" class="btn btn-danger my-3">Ajouter au panier <i class="fas fa-shopping-cart"></i></button>
 	  
     </div>
   </div>'

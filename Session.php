@@ -31,10 +31,9 @@ $database="eceshop";
 
 
 if (isset($_POST["id"])){
-	    echo "oui<br>";
-		echo $_SESSION['ID']."<br>";
+
 		$id = $_POST["id"];
-		echo $id."<br>";
+
 
        $sql="SELECT * FROM articles WHERE id = $id";
        $result = mysqli_query($db_handle, $sql);
@@ -61,7 +60,7 @@ if (isset($_POST["id"])){
        $article=mysqli_fetch_assoc(mysqli_query($db_handle, $sql));
        $sql="INSERT INTO panier(id,image, nom,prix, description,categorie, modedachat, id_utilisateur) VALUES ($id,0,'$nom_article',$prix,'','$categorie','$modedachat',$id_utilisateur)";
 		$result = mysqli_query($db_handle, $sql);
-		echo "article ajouter au panier";
+		echo "article ajouter au panier.<br>Cliquez <a href='Panier.php'>ici</a> pour accéder au panier";
 
 	}
 

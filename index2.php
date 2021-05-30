@@ -113,16 +113,18 @@
                 </div> 
                 <?php
                     }else{
+                        $page="pagevendeur.php";
+                        $choix=$_SESSION['choix'];
 
-                        if($_SESSION['choix']==1){
+                        if($choix==1){
                             $table="acheteur";
                             $page="pageacheteur.php";
                         }
-                        if($_SESSION['choix']==2){
+                        if($choix==2){
                             $table="vendeur";
                             $page="pagevendeur.php";
                         }
-                        if($_SESSION['choix']==3){
+                        if($choix==3){
                             $table="administrateur";
                             $page="pageadmin.php";
                         }

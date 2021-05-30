@@ -52,36 +52,74 @@
 	$db_handle=mysqli_connect('localhost',"root",'');
 	$db_found= mysqli_select_db($db_handle, $database);
 
+	// 	if($db_found){
+	// 			$ID = $_SESSION['ID'];
+	// 			$sql="SELECT * FROM panier WHERE id_utilisateur = $ID";
+	// 			$result = mysqli_query($db_handle, $sql);
+	// 			if ($result->num_rows != 0){
+	// 			while($data = mysqli_fetch_assoc($result)){
+	// 				echo $data['nom'];
+	// 				// if($data['id']==$id){
 
-	if(isset($_POST["id"])){
-		if($db_found){
-				$sql="SELECT id FROM articles";
-				$result = mysqli_query($db_handle, $sql);
-				while($data = mysqli_fetch_assoc($result)){
+	// 				// 	}
 
-					if($data['id']==$id){
+	// 			}
 
-						
-						$emailexist=1;
-						include '.Session.php';
+	// }}
 
-					}
+	if ($db_found) { 
+		$id_u=$_SESSION['ID'];
+	
+$sql = "SELECT * FROM panier WHERE id_utilisateur= $id_u";
+$result = mysqli_query($db_handle, $sql);
+if (mysqli_num_rows($result) == 0) {
+} else {
+while ($data = mysqli_fetch_assoc($result)){
+	
+echo('
+		<div class="col-lg-4">
+    <div class="content">
+	
+      
+      <h4>'.$data['nom'].'</h4>
+      <p>'.$data['prix'].'€</p>
+	  
+	  
 
-				}
+	  
+    </div>
+  </div>'
+	);
+}
+}
+}
 
+if (mysqli_num_rows($result) == 0) {
+} else {
 
-				if($emailexist==0){
-					$sql="INSERT INTO panier(id,image,nom,prix,description,categorie,modedachat) VALUES ('$id','$nom','$prix','','$categorie','$modedachat',)";
-					$result = mysqli_query($db_handle, $sql);
-
-					}
-	}
+while ($data = mysqli_fetch_assoc($result)) {
+	
+echo('
+		<div class="col-lg-4">
+    <div class="content">
+	
+      <img src="data:image/jpd;base64,'. base64_encode($data['image']) . '" alt="image" style="width:100%">
+      <h4>'.$data['nom'].'</h4>
+      <p>'.$data['prix'].'€</p>
+	  
+	  
+	  <button type="submit"  name="id" value="'.$data['id'].'" class="btn btn-danger my-3">Ajouter au panier <i class="fas fa-shopping-cart"></i></button>
+	  
+    </div>
+  </div>'
+	);
+}
 }
 
 
 
-?>
 
+?>
 
 <div class="section" style="text-align: center;" >
 
