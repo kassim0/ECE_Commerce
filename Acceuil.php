@@ -45,29 +45,27 @@
  
 	 <div id="carouselArticle" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="image/cahier oxford.jpg" alt="First slide">
+    <div class="carousel-item active" style= "background-image: url('image/cahier oxford.jpg');" >
     </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="image/vip1.png" alt="Second slide">
+    <div class="carousel-item" style="background-image: url('image/vip1.png');" >
     </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="image/meuble2.jpg" alt="Third slide">
+    <div class="carousel-item" style="background-image: url('image/meuble2.jpg');"  > 
     </div>
   </div>
 
 
 
 
-	 	<a href="#carouselArticle" class="carousel-control-prev" role="button" data-slide="prev">
+	 	<a href="#carouselArticle" class="carousel-control-prev " role="button" data-slide="prev">
 	 		<span class="carousel-control-prev-icon"></span>
-	 	</a>
+</a>
 	 	<a href="#carouselArticle" class="carousel-control-next" role="button" data-slide="next">
 	 		<span class="carousel-control-next-icon"></span>
 	 	</a>
 
  	</div>
 <!--Fin du carousel-->
+
 
  	<!--la description-->
 
@@ -130,63 +128,57 @@
 <div class="container">
 <div class="row">
 
-  <div class="col-lg-4">
-    <div class="content">
-      <img src="image/vip2.jpg" alt="image" style="width:100%">
-      <h4>Image6</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
+<?php 
 
-  <div class="col-lg-4">
-    <div class="content">
-      <img src="image/meuble1.jpg" alt="image" style="width:100%">
-      <h4>image7</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
+try{
+$database = "eceshop";
+$db_handle = mysqli_connect('localhost', 'root', '');
+$db_found = mysqli_select_db($db_handle, $database);
 
-  <div class="col-lg-4">
-    <div class="content">
-      <img src="image/ordinateuretudiant.jpg" alt="Image" style="width:115%">
-      <h4>Image3</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
+if ($db_found) { 
+$sql = "SELECT * FROM articles LIMIT 6 ";
 
-  <div class="col-lg-4">
-    <div class="content">
-      <img src="image/collier.jpg" alt="image" style="width:75%">
-      <h4>Image5</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
+$result = mysqli_query($db_handle, $sql);
 
-   <div class="col-lg-4">
-    <div class="content">
-      <img src="image/11fb9bf9136a91f50967c76df0e31744.jpg" alt="image" style="width:100%">
-      <h4>Image5</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
 
-   <div class="col-lg-4">
-    <div class="content">
-      <img src="image/vip1.png" alt="image" style="width:75%">
-      <h4>Image5</h4>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
+if (mysqli_num_rows($result) == 0) {
+} else {
 
-	</div>
-	</div>
+while ($data = mysqli_fetch_assoc($result)) {
+	
+	echo('
+		<div class="col-lg-4">
+    <div class="content">
+	
+      <img src="data:image/jpd;base64,'. base64_encode($data['image']) . '" alt="image" style="width:100%">
+      <h4>'.$data['nom'].'</h4>
+      <p>'.$data['prix'].'€</p>
+	  <form action="Session.php" method="post" >
+	  <input type="hidden" name="id" value="'.$data['id'].'"
+	  <button type="submit" name="id" class="btn btn-danger my-3">Ajouter au panier <i class="fas fa-shopping-cart"></i></button>
+	  </form>
+    </div>
+  </div>'
+	);
+}
+}
+}
+}
+
+catch(Exception $e){
+echo 'console.log('.$e->getMessage().')';
+
+}
+
+?>
+ </div>
+</div>
 </section>
 <!--Fin section de jour-->
 
 
+<div class="section" style="text-align: center;" >
 
-<div class="section" >
-	<center>
 		<br>
 		<h5 class="text-uppercase font-weight-bold ">Contact</h5>
 		<p>
@@ -195,7 +187,7 @@
 		+33 01 02 03 04 05 <br>
 		</p>
 		<br>
-	</center>
+	
 	</div>
 <footer class="page-footer  ">
 		 <div class="container">
@@ -213,4 +205,3 @@
  
 </body>
 </html>
-
