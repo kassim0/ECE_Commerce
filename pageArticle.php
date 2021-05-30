@@ -16,6 +16,46 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="pageArticle.css">
+	<link rel="stylesheet" type="text/css" href="pageacheteur.css">
+<style type="text/css">
+#presentation h1{
+text-align: center;
+text-decoration: underline;
+}
+
+
+#description{
+    background: black;
+    margin-top: 30px;
+    color: white;
+    border-radius: 20px;
+    font-size: 30px;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.panier {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+  margin-left: 30px;
+  background-color: #ddd;
+    background-color: #666;
+   color: white;
+}
+
+
+
+
+
+
+
+
+</style>
+
+
 </head>
 <body>
 	<!--la navigation-->
@@ -38,6 +78,43 @@
 			 </ul>
 		 </div>
  	</nav>
+
+
+<section id="presentation">
+	<h1>Titre de l'article</h1>
+	<div class="container">
+		<div class="row">
+				<img src="image/vip2.jpg" alt="image" style="width:100%">
+				<div class="container" id="description">
+						<p>Description de l'article... Voiture lamborghini aventador en très bonne état</p>
+				</div>
+				<div class="container" id="Prix">
+						<h2>1000000$</h2>
+						<button type="submit" class="panier" name="panier"><a href="#">Ajouter au panier</button>
+				</div>
+		</div>
+	</div>
+
+</section>
+
+
+
+
+
+
+
+
+ 	<footer class="page-footer  ">
+		 <div class="container">
+			 <div class="row">
+				 <div class="col-lg-8 col-md-8 col-sm-12">
+				 	
+				 </div>
+				</div>
+			 <div class="footer-copyright text-center">Copyright &copy; 2021 ECE Store
+			 
+		</div>
+	</footer>
 
  	
 
