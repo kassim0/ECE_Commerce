@@ -68,7 +68,7 @@
  			<div class="row">
 
  				<div class="col-lg-4">  
- 					<h1><i class="fas fa-user-alt icone"></i></h1>
+ 					<h1><a href="informations.php"><i class="fas fa-user-alt icone"></i></a></h1>
  					<p>Mes informations</p>
  				</div>
 
@@ -80,6 +80,10 @@
  				<div class="col-lg-4">  
  					<h1><i class="fas fa-handshake icone"></i></h1>
  					<p>Mes ventes</p>
+ 				</div>
+ 				<div class="col-lg-4">  
+ 					<h1><a href="deconnexion.php"><i class="	fas fa-door-open icone"></i></a></h1>
+ 					<p>Déconnexion</p>
  				</div>
  			</div>
  		</div>
