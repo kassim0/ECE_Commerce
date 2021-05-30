@@ -81,7 +81,6 @@ $database="eceshop";
 
 
 		if(isset($_POST["connexion"])){	
-				echo $choix;
 			
 			if($choix==1){
 				$table="acheteur";
@@ -125,12 +124,28 @@ $database="eceshop";
 
 
 
+if($choix==3){
+	if($db_found){
+    	if($email!='' && $mdp!=''){
+    	$sql="SELECT id_admin, nom, prenom, mdp, email FROM $table WHERE email='$email' AND mdp='$mdp'";
+    	$result = mysqli_query($db_handle, $sql);
+    	while($data = mysqli_fetch_assoc($result)){
+    		$_SESSION['nom']=$data['nom'];
+    		$_SESSION['prenom']=$data['prenom'];
+    		$_SESSION['email']=$email;
+    		$_SESSION['mdp']=$mdp;
+    		$_SESSION['ID']=$data['id_admin'];
 
 
+    	}
+    }
+
+    }
+}else{
 	
     if($db_found){
-    	if($email!='' || $mdp!=''){
-    	$sql="SELECT id_utilisateur, nom, prenom, pseudo, adresse, codepostal, ville, telephone FROM acheteur WHERE email='$email' AND mdp='$mdp'";
+    	if($email!='' && $mdp!=''){
+    	$sql="SELECT id_utilisateur, nom, prenom, pseudo, adresse, codepostal, ville, telephone FROM $table WHERE email='$email' AND mdp='$mdp'";
     	$result = mysqli_query($db_handle, $sql);
     	while($data = mysqli_fetch_assoc($result)){
     		$_SESSION['nom']=$data['nom'];
@@ -149,6 +164,7 @@ $database="eceshop";
     }
 
     }
+}
 	
 
 
