@@ -35,11 +35,16 @@
 	 		   if($verif==1){
 	 		   	$sql="INSERT INTO vendeur(nom,prenom,email,adresse,codepostal,ville,telephone,pseudo,mdp,pdp) VALUES ('$nom','$prenom','$email','',0,'',0,'$pseudo','$mdp',0)";
 	 		   	$result = mysqli_query($db_handle, $sql);
-	 		   	 echo "Inscription reussie, <br>cliquez "."<a href='#'>"."ici"."</a>"." pour rejoindre votre page<br>";
+	 		   	 echo "Inscription reussie, <br>cliquez "."<a href='pagevendeur.php'>"."ici"."</a>"." pour rejoindre votre page<br>";
 
 
 	 		   	 $sql="DELETE FROM acheteur WHERE id_utilisateur = $id";
 	 		   	 $result = mysqli_query($db_handle, $sql);
+
+	 		   	 $sql="SELECT id FROM vendeur WHERE email='$email' AND mdp='$mdp'";
+	 		   	 $result = mysqli_query($db_handle, $sql);
+	 		   	 	$_SESSION['ID']=$data['id'];
+	 		   	 
 
 
 	 		   }else{echo "le code est érroné.<br>";}
