@@ -6,6 +6,7 @@
 
     $ID=0;
     $choix=isset($_POST["choix"])? $_POST["choix"] : "";
+    $_SESSION['choix']=$choix;
 	$nom=isset($_POST["nom"])? $_POST["nom"] : "";
 	$prenom=isset($_POST["prenom"])? $_POST["prenom"] : "";
 	$pseudo=isset($_POST["pseudo"])? $_POST["pseudo"] : "";
