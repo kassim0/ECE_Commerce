@@ -15,3 +15,21 @@
 .navbar-collapse {
  justify-content: flex-end;
 }
+
+
+h1{
+text-align: center;
+}
+
+
+
+.page-footer {
+ background-color: #1C1C1C;
+ color: #FFFFFF;
+ padding: 15px 0 20px;
+}
+.footer-copyright {
+ color: #666;
+ padding: 10px 0;
+
+}
