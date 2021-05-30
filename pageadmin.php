@@ -58,7 +58,7 @@
  				</div>
 
  				<div class="col-lg-5 b-form text-center">
- 					<button type="submit" class="ajout" name="ajouter"><a href="vendrearticle.php">Supprimer un vendeur</a></button>
+ 					<button type="submit" class="ajout" name="ajouter"><a href="vendrearticle.php">Ajouter un article</a></button>
  				</div>
  			</div>
  		</div>
@@ -78,7 +78,7 @@
  				</div>
 
  				<div class="col-lg-4">  
- 					<h1><i class="fas fa-handshake icone"></i></h1>
+ 					<h1><a href="vente.php"><i class="fas fa-handshake icone"></i></a></h1>
  					<p>Mes ventes</p>
  				</div>
 

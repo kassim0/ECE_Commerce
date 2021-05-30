@@ -15,6 +15,103 @@
 	 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<style type="text/css">
+
+body {
+  padding: 0px;
+  margin: 0px;
+  background: white;
+  height: 100vh;
+}
+/*--- navigation bar ---*/
+.navbar {
+  background: #1c1c1c;
+}
+.nav-link,
+.navbar-brand {
+  color: #ffffff;
+  cursor: pointer;
+}
+.nav-link {
+  margin-right: 1em !important;
+}
+.nav-link:hover {
+  color: #000;
+}
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+#carouselArticle {
+  width: 100%;
+  margin: 10px;
+}
+
+.carousel-item {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+}
+
+.carousel-item img {
+  margin: 10px;
+  float: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 500px;
+}
+
+.col-lg-4 {
+  margin-top: 60px;
+}
+
+.icone {
+  display: inline-block;
+  font-size: 32px;
+  margin-bottom: 16px;
+  color: #000;
+  padding: 8px 16px;
+}
+
+#new {
+  background: black;
+  margin-top: 30px;
+  color: white;
+}
+
+#nouveau {
+  text-align: center;
+}
+
+.section {
+  background-color: #d8d8d8;
+}
+
+.section a {
+  color: black;
+}
+
+.page-footer {
+  background-color: #1c1c1c;
+  color: #ffffff;
+  padding: 15px 0 20px;
+}
+.footer-copyright {
+  color: #666;
+  padding: 10px 0;
+}
+
+
+
+</style>
+
+
+
 </head>
 <body>
 

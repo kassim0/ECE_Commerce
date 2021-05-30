@@ -59,19 +59,20 @@
                     <div class="b-logo swift_left">
                         <img src="logoShopECE.png" class="img-fluid">
                     </div>
+
+                    <?php
+                        if(!isset($_SESSION['ID'])){
+                    
+
+
+                    ?>
                     <div class="b-title text-center">
                         <h1 class="user_title">Connectez-vous ici</h1>
                         <button type="button" name="signin" ><a href="connexion1.php"> Se connecter</a></button>
                     </div>
                 </div>
 
-                <?php
-                $lien='compte1.php';
-                if(!isset($_SESSION['ID'])){
-                    $lien='pagevendeur.php';
-                    echo '<button type="submit" name="inscription" class="sign_up">Accéder à mon compte ></button>';
-
-                ?>
+                
                 <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
                     <div class="b-logo swift_right">
                         <img src="logoShopECE.png" class="img-fluid" style="width: 100px; height: 50px;">
@@ -111,6 +112,25 @@
                     </div>
                 </div> 
                 <?php
+                    }else{
+
+                        if($_SESSION['choix']==1){
+                            $table="acheteur";
+                            $page="pageacheteur.php";
+                        }
+                        if($_SESSION['choix']==2){
+                            $table="vendeur";
+                            $page="pagevendeur.php";
+                        }
+                        if($_SESSION['choix']==3){
+                            $table="administrateur";
+                            $page="pageadmin.php";
+                        }
+
+                    echo        '<div class="b-title text-center">';
+                    echo         '<h1 class="user_title">Connectez-vous ici</h1>';
+                    echo         '<button type="button" name="signin" ><a href='.$page.'>Accéder à votre compte</a></button>';
+                    echo    '</div>';
                     }
                 ?>
 

@@ -78,7 +78,7 @@
  				</div>
 
  				<div class="col-lg-4">  
- 					<h1><i class="fas fa-handshake icone"></i></h1>
+ 					<h1><a href="vente.php"><i class="fas fa-handshake icone"></i></a></h1>
  					<p>Mes ventes</p>
  				</div>
  				<div class="col-lg-4">  
