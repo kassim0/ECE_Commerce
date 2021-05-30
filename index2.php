@@ -65,7 +65,13 @@
                     </div>
                 </div>
 
-                
+                <?php
+                $lien='compte1.php';
+                if(!isset($_SESSION['ID'])){
+                    $lien='pagevendeur.php';
+                    echo '<button type="submit" name="inscription" class="sign_up">Accéder à mon compte ></button>';
+
+                ?>
                 <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
                     <div class="b-logo swift_right">
                         <img src="logoShopECE.png" class="img-fluid" style="width: 100px; height: 50px;">
@@ -104,6 +110,9 @@
 
                     </div>
                 </div> 
+                <?php
+                    }
+                ?>
 
             </div>
         </div>
