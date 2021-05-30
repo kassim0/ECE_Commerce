@@ -58,7 +58,7 @@
  				</div>
 
  				<div class="col-lg-5 b-form text-center">
- 					<button type="submit" class="ajout" name="ajouter">Ajouter un article</button>
+ 					<button type="submit" class="ajout" name="ajouter"><a href="vendrearticle.php">Ajouter un article</a></button>
  				</div>
  			</div>
  		</div>
