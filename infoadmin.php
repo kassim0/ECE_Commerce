@@ -70,10 +70,6 @@ margin-top: 50px;
                 <h3>Prenom: <?php echo $_SESSION['prenom']?></h3>
                 <!-- <i class="fas fa-user b-font"></i> -->
             </div>
-            <div class="form-group username">
-                <h3>Pseudo: <?php echo $_SESSION['pseudo']?></h3>
-                <!-- <i class="fas fa-user b-font"></i> -->
-            </div>
             <div class="form-group">
                 <h3>Email: <?php echo $_SESSION['email']?></h3>
                 <!-- <i class="fas fa-envelope b-font"></i> -->

@@ -51,14 +51,14 @@
  						<div class="row element">
  							<div class="col-lg-8">
  								<img src="./image/pdpdefaut.png" alt="pdp">
- 								<h4><?php echo $_SESSION['pseudo'];  ?></h4>
+ 								<h4><?php echo $_SESSION['prenom'];  ?></h4>
  							</div>
  						</div>
  					</div>
  				</div>
 
  				<div class="col-lg-5 b-form text-center">
- 					<button type="submit" class="ajout" name="ajouter">Ajouter un article</button>
+ 					<button type="submit" class="ajout" name="ajouter"><a href="vendrearticle.php">Supprimer un vendeur</a></button>
  				</div>
  			</div>
  		</div>
@@ -68,7 +68,7 @@
  			<div class="row">
 
  				<div class="col-lg-4">  
- 					<h1><i class="fas fa-user-alt icone"></i></h1>
+ 					<h1><a href="infoadmin.php"><i class="fas fa-user-alt icone"></i></a></h1>
  					<p>Mes informations</p>
  				</div>
 
@@ -83,8 +83,12 @@
  				</div>
 
  				<div class="col-lg-4">  
- 					<h1><i class="fas fa-user-alt-slash icone"></i></h1>
+ 					<h1><a href="suppvendeur.php"><i class="fas fa-user-alt-slash icone"></i></a></h1>
  					<p>Supprimer un vendeur</p>
+ 				</div>
+ 				<div class="col-lg-4">  
+ 					<h1><a href="deconnexion.php"><i class="	fas fa-door-open icone"></i></a></h1>
+ 					<p>Déconnexion</p>
  				</div>
  			</div>
  		</div>

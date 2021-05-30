@@ -7,7 +7,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Mes informations</title>
+	<title>Votre compte</title>
 	<link rel="icon" href="favicon.ico" type="image/x-icon"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet"
@@ -16,16 +16,8 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="pageArticle.css">
+	<link rel="stylesheet" type="text/css" href="pageacheteur.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<style type="text/css">
-.container{
-margin-top: 50px;
-
-}
-
-
-
-</style>
 </head>
 <body>
 	<!--la navigation-->
@@ -42,7 +34,7 @@ margin-top: 50px;
 			 <ul class="navbar-nav">
 				 <li class="nav-item"><a class="nav-link" href="Acceuil.php">Accueil</a></li>
 				 <li class="nav-item"><a class="nav-link" href="parcourir.php">Tout Parcourir</a></li>
-				 <li class="nav-item"><a class="nav-link" href="Notifications.php">Notifications</a></li>
+				 <li class="nav-item"><a class="nav-link" href="Notif.php">Notifications</a></li>
 				 <li class="nav-item"><a class="nav-link" href="Panier.php">Panier</a></li>
 				 <li class="nav-item"><a class="nav-link" href="index2.php">Votre Compte</a></li>
 			 </ul>
@@ -51,53 +43,44 @@ margin-top: 50px;
 
 
 
-<!-- Formulaire -->
-
 <div class="container">
     <div class="b-logo swift_right">
         <img src="logoShopECE.png" class="img-fluid" style="width: 100px; height: 50px;">
     </div>
     <div class="b-form text-center">
         <div class="b-form-title">
-            <h1 class="form_title">Mes informations</h1>
+            <h1 class="form_title">Supprimer un vendeur</h1>
         </div>
-        <form method="post" action="modifications.php">
+
+        <form method="post" action="vendrearticle1.php">
             <div class="form-group username">
-                <h3>Nom: <?php echo $_SESSION['nom']?></h3>
-                <!-- <i class="fas fa-user b-font"></i> -->
-            </div>
-            <div class="form-group username">
-                <h3>Prenom: <?php echo $_SESSION['prenom']?></h3>
-                <!-- <i class="fas fa-user b-font"></i> -->
-            </div>
-            <div class="form-group username">
-                <h3>Pseudo: <?php echo $_SESSION['pseudo']?></h3>
-                <!-- <i class="fas fa-user b-font"></i> -->
-            </div>
-            <div class="form-group">
-                <h3>Email: <?php echo $_SESSION['email']?></h3>
-                <!-- <i class="fas fa-envelope b-font"></i> -->
-            </div>
-            <div class="form-group">
-                <h3>Mot de passe: <?php echo $_SESSION['mdp']?></h3>
-                <!-- <i class="fas fa-unlock-alt b-font"></i> -->
+                <input class="form-control" type="number" name="id_utilisateur" placeholder="ID">
+                <i class="fas fa-user b-font"></i>
             </div>
             <div class="form-group">
                 <span class="b-forgot"></span>
             </div>
-            <!-- <button type="submit" name="enregistre" class="sign_up" >Retour</button> -->
+            <button type="submit" name="suppvendeur" class="sign_up">Supprimer</button>
         </form>
+
     </div>
-
-</div>
-
+</div> 
 
 
 
 
 
+ 	<footer class="page-footer  ">
+		 <div class="container">
+			 <div class="row">
+				 <div class="col-lg-8 col-md-8 col-sm-12">
+				 	
+				 </div>
+				</div>
+			 <div class="footer-copyright text-center">Copyright &copy; 2021 ECE Store
+			 
+		</div>
+	</footer>
 
 </body>
 </html>
-
-
