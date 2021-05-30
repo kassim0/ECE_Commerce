@@ -1,3 +1,8 @@
+<?php
+    session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <html>
@@ -59,11 +64,7 @@
                         <button type="button" name="signin" ><a href="connexion1.php"> Se connecter</a></button>
                     </div>
                 </div>
-                                        <?php
-                        if(isset($_SESSION['nom'])){
 
-
-                        ?>
                 
                 <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
                     <div class="b-logo swift_right">
@@ -100,9 +101,7 @@
                             </div>
                             <button type="submit" name="inscription" class="sign_up">S'inscrire</button>
                         </form>
-                        <?php
-                    }
-                        ?>
+
                     </div>
                 </div> 
 
