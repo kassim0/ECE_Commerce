@@ -82,22 +82,6 @@ margin-top: 50px;
                 <h3>Mot de passe: <?php echo $_SESSION['mdp']?></h3>
                 <!-- <i class="fas fa-unlock-alt b-font"></i> -->
             </div>
-            <!-- <div class="form-group">
-                <input class="form-control" type="text" name="adresse" placeholder="Adresse: <?php echo $_SESSION['adresse']?>">
-                <i class="fas fa-home b-font"></i>
-            </div>
-            <div class="form-group">
-                <input class="form-control" type="text" name="codepostal" placeholder="Code postal: <?php echo $_SESSION['codepostal']?>">
-                <i class="fas fa-city b-font"></i>
-            </div>
-            <div class="form-group">
-                <input class="form-control" type="text" name="ville" placeholder="Ville: <?php echo $_SESSION['ville']?>">
-                <i class="fas fa-city b-font"></i>
-            </div>
-            <div class="form-group">
-                <input class="form-control" type="text" name="tel" placeholder="Téléphone: <?php echo $_SESSION['tel']?>">
-                <i class="	fas fa-phone b-font"></i>
-            </div> -->
             <div class="form-group">
                 <span class="b-forgot"></span>
             </div>
